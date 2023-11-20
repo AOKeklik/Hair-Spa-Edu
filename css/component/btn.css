@@ -1,0 +1,23 @@
+.btn {
+	cursor: pointer;
+	font-size: 1.7rem;
+	overflow: hidden;
+	font-weight: 600;
+	letter-spacing: 1px;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.btn::after {
+	flex-grow: 1;
+	content: "";
+	width: 30%;
+	height: 2px;
+}
+.btn-primary {
+	color: var(--color-white);
+}
+.btn-primary::after {
+	background-color: var(--color-white);
+}

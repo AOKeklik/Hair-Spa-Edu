@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+	line-height: 1.7;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.heading-quaternary {
+	font-family: "Lato", sans-serif;
+	text-transform: uppercase;
+}
+.heading-primary {
+	font-size: 3.5rem;
+}
+.heading-secondary {
+	font-size: 3rem;
+	line-height: 1.2;
+	letter-spacing: 1px;
+}
+.heading-tertiary {
+}
+.heading-quaternary {
+}
+.paragraph-primary {
+	font-family: "Roboto", sans-serif;
+	line-height: 1.7;
+	letter-spacing: 1px;
+	font-size: 1.7rem;
+	font-weight: 400;
+}

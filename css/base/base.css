@@ -1,0 +1,28 @@
+* {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	height: 100%;
+}
+body {
+	overflow-x: hidden;
+	height: 100%;
+	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/* query */
+@media (max-width: 1000px) {
+	html {
+		font-size: 52.5%;
+	}
+}

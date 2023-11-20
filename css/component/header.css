@@ -1,0 +1,141 @@
+.header {
+	width: 100%;
+}
+.nav-top,
+.nav-bottom {
+	padding: 0 2rem;
+	max-width: 134rem;
+	margin: 0 auto;
+}
+.nav-top,
+.nav-bottom,
+.menu {
+	display: flex;
+	align-items: center;
+}
+/* nav top */
+.nav-top {
+	height: 6rem;
+	justify-content: end;
+	gap: 1.5rem;
+}
+.nav-top-icon {
+	width: 3rem;
+	height: 3rem;
+	fill: var(--color-gray);
+}
+/* nav bottom */
+.nav-wrap {
+	background-color: var(--color-primary);
+}
+.nav-bottom {
+	width: 100%;
+
+	justify-content: space-between;
+}
+.logo {
+	height: 5rem;
+	transform-origin: left;
+	transform: scale(2) translate(0, -1rem);
+}
+.logo img {
+	height: 100%;
+}
+.menu {
+	position: relative;
+	background-color: var(--color-primary);
+}
+.menu-item {
+}
+.menu-item a {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	display: inline-block;
+	padding: 2rem 1rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	transition: color 0.5s;
+}
+.menu-item a::before {
+	display: block;
+	content: attr(title);
+	font-weight: 900;
+	height: 0;
+	user-select: none;
+	overflow: hidden;
+	visibility: hidden;
+}
+.menu-item a:hover {
+	font-weight: 900;
+	color: var(--color-tertiary);
+}
+/* active */
+.menu-item.active {
+	background-color: var(--color-secondary);
+	box-shadow: -1px 0 0 var(--color-secondary);
+}
+.menu-item.active a {
+	color: var(--color-tertiary);
+	font-weight: 900;
+}
+/* marker */
+.marker {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background-color: var(--color-secondary);
+	transition: 0.3s;
+	box-shadow: -1px 0 0 var(--color-secondary);
+}
+/* nav burger */
+.nav-burger {
+	display: none;
+}
+.nav-burger svg {
+	width: 4rem;
+	height: 4rem;
+	stroke: var(--color-secondary);
+	stroke-width: 2px;
+	cursor: pointer;
+}
+.nav-burger-close {
+	display: none;
+}
+/* query */
+@media (max-width: 800px) {
+	.nav-bottom {
+		position: relative;
+	}
+	.menu {
+		position: absolute;
+		z-index: 9999;
+		top: 5rem;
+		right: -20rem;
+		flex-direction: column;
+		width: 20rem;
+		transition: transform 0.5s;
+	}
+	.menu-item,
+	.menu-item a {
+		width: 100%;
+	}
+	.nav-burger {
+		display: flex;
+	}
+	.toggle-nav .menu {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-20rem, 0);
+	}
+	.toggle-nav .nav-burger-open {
+		display: none;
+	}
+	.toggle-nav .nav-burger-close {
+		display: block;
+	}
+}

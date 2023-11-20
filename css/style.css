@@ -1,4 +1,7 @@
 /* components */
+@import "./component/form.css";
+@import "./component/header.css";
+@import "./component/btn.css";
 
 /* base */
 @import "./base/typography.css";

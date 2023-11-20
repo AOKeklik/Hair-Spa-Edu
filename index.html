@@ -1,17 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Hair & Spa Edu</title>
 </head>
+
 <body>
-    <header>
-        
+    <header class="header">
+        <nav class="nav-top">
+            <svg class="nav-top-icon">
+                <use href="./img/icons.svg#icon-search" />
+            </svg>
+            <svg class="nav-top-icon">
+                <use href="./img/icons.svg#icon-user" />
+            </svg>
+            <svg class="nav-top-icon">
+                <use href="./img/icons.svg#icon-heart" />
+            </svg>
+            <svg class="nav-top-icon">
+                <use href="./img/icons.svg#icon-bag" />
+            </svg>
+        </nav>
+        <div class="nav-wrap">
+            <nav class="nav-bottom">
+                <a class="logo">
+                    <img src="./img/logo.png" alt="">
+                </a>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#" title="SZKOLENIA">SZKOLENIA</a></li>
+                    <li class="menu-item"><a href="#" title="DOFINASNSOWANIA">DOFINASNSOWANIA</a></li>
+                    <li class="menu-item active"><a href="#" title="INSTRUKTORZY">INSTRUKTORZY</a></li>
+                    <li class="menu-item"><a href="#" title="MODELKI">MODELKI</a></li>
+                    <li class="menu-item"><a href="#" title="PRASA">PRASA</a></li>
+                    <li class="menu-item"><a href="#" title="KONTAKT">KONTAKT</a></li>
+                    <span class="marker"></span>
+                </ul>
+                <ul class="nav-burger">
+                    <svg class="nav-burger-open">
+                        <use href="./img/icons.svg#icon-burger" />
+                    </svg>
+                    <svg class="nav-burger-close">
+                        <use href="./img/icons.svg#icon-close" />
+                    </svg>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
+    <main class="bg-rectangle">
+        <section class="hero-section p-y-l">
+            <div class="container">
+                <div class="row gap4">
+                    <div class="col2of3">
+                        <div class="row gap2">
+                            <div class="col1of2">
+                                <div class="bg-img bg-gradient flex-v flex-end h30"
+                                    style="background-image: url(./img/box/1.jpg);">
+                                    <h2 class="heading-secondary flex-v text-center p-r-m">
+                                        <span class="text-white">salon</span>
+                                        <span class="text-white">fryzjerski</span>
+                                    </h2>
+                                    <a href="#" class="btn btn-primary w-80 m-b-m">poznaj nas</a>
+                                </div>
+                            </div>
+                            <div class="col1of2">
+                                <div class="bg-img bg-gradient flex-v flex-end h30"
+                                    style="background-image: url(./img/box/2.jpg);">
+                                    <h2 class="heading-secondary flex-v text-center p-r-m">
+                                        <span class="text-white">salon</span>
+                                        <span class="text-white">fryzjerski</span>
+                                    </h2>
+                                    <a href="#" class="btn btn-primary w-80 m-b-m">sprawdż produkty</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col1of3 flex-center">
+                        <div class="flex-v gap1">
+                            <h1 class="heading-primary heading-marker-l">darmowa wiedza</h1>
+                            <p class="paragraph-primary">
+                                Pobierz darmowe materiały szkoleniowe i sprawdż jak działąmy. Po
+                                więcej zapraszamy do kalendarza szkoleń.
+                            </p>
+                            <div class="form-control">
+                                <input type="text" placeholder="Adres e-mail...">
+                                <span class="form-send-text">pobierz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lectures-section p-b-l">
+            <h2 class="heading-primary heading-marker-s text-center">najbliższe szkolenia online</h2>
+        </section>
+    </main>
+
 
     <script type="module" src="src/index.js"></script>
 </body>
+
 </html>
