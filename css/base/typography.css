@@ -20,6 +20,10 @@ body {
 	letter-spacing: 1px;
 }
 .heading-tertiary {
+	font-size: 2rem;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	font-weight: 900;
 }
 .heading-quaternary {
 }
