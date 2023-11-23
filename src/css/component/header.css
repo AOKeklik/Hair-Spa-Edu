@@ -34,7 +34,7 @@
 	justify-content: space-between;
 }
 .logo {
-	height: 5rem;
+	height: 6rem;
 	transform-origin: left;
 	transform: scale(2) translate(0, -1rem);
 }

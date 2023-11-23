@@ -1,4 +1,5 @@
 /* components */
+@import "./component/programs.css";
 @import "./component/line.css";
 @import "./component/form.css";
 @import "./component/header.css";
