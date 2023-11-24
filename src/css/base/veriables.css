@@ -5,4 +5,7 @@
 	--color-gray: #333;
 	--color-white: #fff;
 	--color-black: #000;
+
+	--gap: 2rem;
+	--gap-h: 5rem;
 }

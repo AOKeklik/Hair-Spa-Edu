@@ -10,6 +10,7 @@ class Header {
 		this.menuItems.forEach(el => {
 			el.addEventListener("mouseenter", this.reLocateMarker.bind(this))
 			el.addEventListener("mouseleave", this.reLocateMarker.bind(this))
+			el.addEventListener("click", this.activeMenuItem.bind(this))
 		})
 		this.burger.addEventListener("click", this.toggleMenu.bind(this))
 	}
@@ -19,6 +20,17 @@ class Header {
 
 		if (theOpen) this.header.classList.add("toggle-nav")
 		if (theClose) this.header.classList.remove("toggle-nav")
+	}
+	activeMenuItem(e) {
+		const theNode = e.target.closest(".menu-item")
+
+		if(!theNode) return
+
+		this.menuItems.forEach(el => {
+			el.classList.remove("active")
+		})
+
+		theNode.classList.add("active")
 	}
 	reLocateMarker(e) {
 		if (e.type === "mouseleave") return (this.marker.style.height = "0px")

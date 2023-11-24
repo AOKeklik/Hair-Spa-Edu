@@ -23,6 +23,7 @@
 	width: 3rem;
 	height: 3rem;
 	fill: var(--color-gray);
+	cursor: pointer;
 }
 /* nav bottom */
 .nav-wrap {
@@ -34,6 +35,7 @@
 	justify-content: space-between;
 }
 .logo {
+	z-index: 99999;
 	height: 6rem;
 	transform-origin: left;
 	transform: scale(2) translate(0, -1rem);
@@ -90,7 +92,7 @@
 	height: 0;
 	background-color: var(--color-secondary);
 	transition: 0.3s;
-	box-shadow: -1px 0 0 var(--color-secondary);
+	box-shadow: -1px 0 0 var(--color-secondary), 1px 0 0 var(--color-secondary);
 }
 /* nav burger */
 .nav-burger {
