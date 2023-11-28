@@ -25,7 +25,7 @@ class Header {
 	toggleActiveMenuItem(e) {
 		const theNode = e.target.closest(".menu-item")
 
-		if(!theNode) return
+		if (!theNode) return
 
 		this.menuItems.forEach(el => {
 			el.classList.remove("active")
@@ -42,15 +42,13 @@ class Header {
 		this.marker.style.width = theNode.offsetWidth + "px"
 		this.marker.style.height = theNode.offsetHeight + "px"
 	}
-	reloadingActiveMenuItem () {
+	reloadingActiveMenuItem() {
 		const currentPage = document.URL
 
-		console.log(currentPage)
 		this.menuItems.forEach(el => {
 			el.classList.remove("active")
-			
-			if (el.children[0].href === currentPage)
-				el.classList.add("active")
+
+			if (el.children[0].href === currentPage) el.classList.add("active")
 		})
 	}
 }
