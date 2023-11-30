@@ -1,0 +1,29 @@
+[data-breadcrumbs] {
+    display: flex;
+}
+[data-breadcrumbs] > * {
+    cursor: pointer;
+    position: relative;
+    padding: 1.3rem 5rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-color: var(--color-primary);
+}
+[data-breadcrumbs] > *::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 30px solid transparent;
+    border-left: 20px solid #fff;
+    border-bottom: 30px solid transparent;
+}
+[data-breadcrumbs] > *::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 30px solid #fff;
+    border-left: 20px solid transparent;
+    border-bottom: 30px solid #fff;
+}

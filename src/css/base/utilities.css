@@ -118,7 +118,7 @@
 	margin-bottom: 2rem;
 }
 .m-b-m {
-	margin-bottom: 4rem;
+	margin-bottom: 4rem !important;
 }
 .m-b-l {
 	margin-bottom: 8rem;
