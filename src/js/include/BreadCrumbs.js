@@ -3,6 +3,8 @@ class BreadCrumbs {
     baseUrl
     currentPage
     constructor () {
+        this.parentElement = document.querySelector("[data-breadcrumbs]")
+        if (!this.parentElement) return
         this.events()
     }
     events () {
@@ -10,7 +12,6 @@ class BreadCrumbs {
         this.renderBreadCrumbs()
     }
     setLinks () {
-        this.parentElement = document.querySelector("[data-breadcrumbs]")
         this.baseUrl = window.location.origin
 
         const rawLinks = window.location.pathname
@@ -29,8 +30,8 @@ class BreadCrumbs {
         console.log(this.parentElement)
         this.parentElement.innerHTML = ""
         this.parentElement.insertAdjacentHTML("afterbegin", 
-        `<a hre="${this.baseUrl}">home</a>
-        <span>${this.currentPage}</span>`)
+        `<a href="${this.baseUrl}">home</a>
+        <a href="${this.baseUrl}/${this.currentPage}">${this.currentPage}</a>`)
     }
 }
 

@@ -35,3 +35,14 @@ body {
 	font-size: 1.7rem;
 	font-weight: 400;
 }
+.list-primary > li {
+	padding-left: 2rem;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+.list-primary > li::before {
+	content: "\2702";
+	padding-right: 1.5rem;
+	font-size: 3rem;
+	color: var(--color-tertiary);
+}
