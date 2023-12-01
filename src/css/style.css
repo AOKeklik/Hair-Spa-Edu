@@ -1,4 +1,5 @@
 /* components */
+@import "./component/lightbox.css";
 @import "./component/breadcrumbs.css";
 @import "./component/line.css";
 @import "./component/form.css";

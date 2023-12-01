@@ -101,15 +101,15 @@
 	padding-bottom: 2rem !important;
 }
 .p-y-m {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	padding-top: 4rem !important;
+	padding-bottom: 4rem !important;
 }
 .p-y-l {
-	padding-top: 8rem;
-	padding-bottom: 8rem;
+	padding-top: 8rem !important;
+	padding-bottom: 8rem !important;
 }
 .m-b-xxs {
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 .m-b-xs {
 	margin-bottom: 1rem;
