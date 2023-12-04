@@ -12,9 +12,10 @@ class RevealSections {
 			Array(steps + 1)
 				.fill(0)
 				.map((_, index) => index / steps || 0)
-		const handleObserving = entries => {
-			entries.forEach((entry, observing) => {
-				const theNode = entry.target
+		const handleObserving = (entries, observing) => {
+			let theNode
+			entries.forEach((entry) => {
+				theNode = entry.target
 				const className = entry.target.dataset.reveal
 				const currentY = entry.boundingClientRect.y
 				const currentRatio = entry.intersectionRatio
@@ -23,11 +24,8 @@ class RevealSections {
 				if (isIntersecting) {
 					theNode.classList.add(className)
 				}
-
-				if (!isIntersecting) {
-					observing.unobserve(theNode)
-				}
 			})
+			observing.unobserve(theNode)
 		}
 		const observing = new IntersectionObserver(handleObserving, {
 			root: null,
