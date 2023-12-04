@@ -8,6 +8,12 @@
 .text-white {
 	color: var(--color-white);
 }
+.text-primary {
+	color: var(--color-primary);
+}
+.text-secondary {
+	color: var(--color-secondary);
+}
 .text-thin {
 	font-weight: 400 !important;
 }
@@ -77,6 +83,9 @@
 }
 .p-s {
 	padding: 2rem;
+}
+.p-m {
+	padding: 4rem;
 }
 .p-r-m {
 	padding-right: 4rem;
@@ -169,6 +178,20 @@
 }
 /* flex */
 /* bg */
+.bg-blur {
+	position: relative;
+}
+.bg-blur::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-primary);
+	filter: blur(1px) opacity(0.9);
+}
 .bg-white {
 	background-color: var(--color-white);
 }
@@ -177,6 +200,16 @@
 }
 .bg-secondary {
 	background-color: var(--color-secondary);
+}
+.bg-tertiary {
+	background-color: var(--color-tertiary);
+}
+.bg-tertiary-gradient {
+	background-image: linear-gradient(
+		to right,
+		var(--color-tertiary),
+		transparent
+	);
 }
 .bg-img {
 	background-position: center;
@@ -187,11 +220,19 @@
 .bg-rectangle,
 .bg-rectangle-secondary,
 .bg-rectangle-secondary-reverse,
-.bg-rectangle-tertiary {
+.bg-rectangle-tertiary,
+.bg-rectangle-quaternary {
 	position: relative;
 }
-.bg-gradient::before {
+.bg-gradient::before,
+.bg-rectangle::after,
+.bg-rectangle-secondary::after,
+.bg-rectangle-secondary-reverse::after,
+.bg-rectangle-tertiary::after,
+.bg-rectangle-quaternary::after {
 	content: "";
+}
+.bg-gradient::before {
 	z-index: 0;
 	position: absolute;
 	width: 100%;
@@ -209,7 +250,6 @@
 .bg-rectangle::after {
 	position: absolute;
 	z-index: -2;
-	content: "";
 	top: 4rem;
 	right: 13%;
 	background-color: var(--color-primary);
@@ -219,7 +259,6 @@
 .bg-rectangle-secondary::after {
 	position: absolute;
 	z-index: -2;
-	content: "";
 	bottom: 0;
 	left: 0;
 	background-color: var(--color-primary);
@@ -229,7 +268,6 @@
 .bg-rectangle-secondary-reverse::after {
 	position: absolute;
 	z-index: -2;
-	content: "";
 	bottom: 0;
 	right: 0;
 	background-color: var(--color-primary);
@@ -239,12 +277,20 @@
 .bg-rectangle-tertiary::after {
 	position: absolute;
 	z-index: -2;
-	content: "";
 	top: 12rem;
 	left: 0;
 	background-color: var(--color-secondary);
 	width: 70%;
 	height: 30rem;
+}
+.bg-rectangle-quaternary::after {
+	position: absolute;
+	z-index: -2;
+	bottom: 0;
+	right: 0;
+	background-color: var(--color-secondary);
+	width: 80%;
+	height: 40rem;
 }
 @media (max-width: 700px) {
 	.bg-rectangle-tertiary::after {
@@ -264,18 +310,24 @@
 	object-position: left;
 }
 .icon-primary,
-.icon-secondary {
+.icon-secondary,
+.icon-tertiary {
 	padding: 1rem;
 	fill: var(--color-white);
 	border: 2px solid var(--color-white);
 	border-radius: 50%;
 	cursor: pointer;
 }
+.icon-tertiary {
+	fill: var(--color-secondary);
+	border: 2px solid var(--color-secondary);
+}
 .icon-primary {
 	width: 7rem;
 	height: 7rem;
 }
-.icon-secondary {
+.icon-secondary,
+.icon-tertiary {
 	width: 5rem;
 	height: 5rem;
 }

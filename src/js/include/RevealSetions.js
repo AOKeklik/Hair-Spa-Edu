@@ -1,68 +1,40 @@
 class RevealSections {
 	parentElements
+	previousY = 0
+	previousRatio = 0
 	constructor() {
-		this.events()
-	}
-	events() {
-		this.splitInfo()
-	}
-	splitInfo() {
 		this.parentElements = document.querySelectorAll("[data-reveal]")
-
-		this.parentElements.forEach(el => {
-			const instructions = el.dataset.reveal.split("-")
-
-			this.applayAnimations(el, instructions)
-		})
+		if (!this.parentElements) return
+		this.handleIntersect()
 	}
-	applayAnimations(el, instructions) {
-		const [type, direct, duration, delay, times] = instructions
-		let animaateClass = type + "-" + direct + "-" + duration + "-" + delay
-		const that = this
-		new IntersectionObserver(
-			(entries, observed) => {
-				const entry = entries[0]
+	handleIntersect() {
+		const thresholdArray = steps =>
+			Array(steps + 1)
+				.fill(0)
+				.map((_, index) => index / steps || 0)
+		const handleObserving = entries => {
+			entries.forEach((entry, observing) => {
+				const theNode = entry.target
+				const className = entry.target.dataset.reveal
+				const currentY = entry.boundingClientRect.y
+				const currentRatio = entry.intersectionRatio
+				const isIntersecting = entry.isIntersecting
 
-				if (direct === "up" || direct === "down") {
-					if (entry.target.delayAnimation === undefined) {
-						entry.target.delayAnimation = true
-
-						if (times === "2x") {
-							if (entry.isIntersecting) {
-								entry.target.classList.add(animaateClass)
-							} else {
-								entry.target.classList.remove(animaateClass)
-							}
-						} else {
-							if (entry.isIntersecting)
-								entry.target.classList.add("reveal")
-						}
-
-						setTimeout(() => {
-							entry.target.delayAnimation = undefined
-						}, 500)
-					}
-
-					return
+				if (isIntersecting) {
+					theNode.classList.add(className)
 				}
 
-				if (times === "2x") {
-					if (entry.isIntersecting) {
-						entry.target.classList.add(animaateClass)
-					} else {
-						entry.target.classList.remove(animaateClass)
-					}
-				} else {
-					if (entry.isIntersecting)
-						entry.target.classList.add("reveal")
+				if (!isIntersecting) {
+					observing.unobserve(theNode)
 				}
-			},
-			{
-				root: null,
-				rootMargin: "0px",
-				threshold: that.threshold,
-			}
-		).observe(el)
+			})
+		}
+		const observing = new IntersectionObserver(handleObserving, {
+			root: null,
+			rootMargin: "0px",
+			threshold: thresholdArray(10),
+		})
+		this.parentElements.forEach(el => observing.observe(el))
 	}
 }
 new RevealSections()
