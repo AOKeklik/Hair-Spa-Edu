@@ -8,6 +8,9 @@
 .text-white {
 	color: var(--color-white);
 }
+.text-black {
+	color: var(--color-gray) !important;
+}
 .text-primary {
 	color: var(--color-primary);
 }
@@ -87,6 +90,9 @@
 .p-m {
 	padding: 4rem;
 }
+.p-t-s {
+	padding-top: 2rem !important;
+}
 .p-r-m {
 	padding-right: 4rem;
 }
@@ -116,6 +122,10 @@
 .p-y-l {
 	padding-top: 8rem !important;
 	padding-bottom: 8rem !important;
+}
+.m-y-s {
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
 }
 .m-b-xxs {
 	margin-bottom: 0.5rem;
@@ -331,9 +341,26 @@
 	width: 5rem;
 	height: 5rem;
 }
+.icon-l,
+.icon-l-circle {
+	width: 10rem;
+	height: 10rem;
+}
+.icon-l-circle {
+	box-sizing: content-box;
+	background-color: var(--color-secondary);
+	padding: 2rem;
+	border-radius: 50%;
+}
+.icon-white {
+	fill: var(--color-white);
+}
 /* box */
 .border-s {
 	border: 2px solid var(--color-secondary);
+}
+.box-inline-blok {
+	display: inline-block;
 }
 /* markers */
 .heading-marker {
