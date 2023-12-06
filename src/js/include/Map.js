@@ -28,7 +28,6 @@ export default class Map {
 			)
 			this.#maps.push(newMap)
 		})
-		console.log(L)
 		//  map
 		this.#map = L.map("map").setView(
 			this.#maps[0]["coords"],

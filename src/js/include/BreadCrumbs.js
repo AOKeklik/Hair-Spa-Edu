@@ -1,6 +1,7 @@
 class BreadCrumbs {
 	parentElement
 	baseUrl
+	links
 	currentPage
 	constructor() {
 		this.parentElement = document.querySelector("[data-breadcrumbs]")
@@ -18,6 +19,8 @@ class BreadCrumbs {
 			.slice()
 			.split("/")
 			.filter(Boolean)
+
+		this.links = rawLinks
 
 		this.currentPage = rawLinks
 			.slice()

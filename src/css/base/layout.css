@@ -12,6 +12,9 @@
 .row-reverse {
 	flex-direction: row-reverse;
 }
+.nth-child:nth-of-type(odd) .row {
+	flex-direction: row-reverse;
+}
 .gap05 {
 	gap: 0.5rem;
 }
@@ -108,6 +111,10 @@
 }
 .flex-col2of3 {
 	flex: 1 0 calc(2 * ((100% - (2 * var(--gap))) / 3) + var(--gap));
+}
+/* nth-child */
+.nth-child:nth-child(even) {
+	background-color: var(--color-primary);
 }
 /* query */
 @media (max-width: 800px) {
