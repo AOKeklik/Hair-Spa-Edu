@@ -1,4 +1,6 @@
 /* components */
+@import "./component/slider-employees.css";
+@import "./component/slider.css";
 @import "./component/map.css";
 @import "./component/lightbox.css";
 @import "./component/breadcrumbs.css";

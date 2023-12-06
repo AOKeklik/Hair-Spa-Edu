@@ -1,4 +1,5 @@
 // import "../css/style.css"
+import "./include/Slider.js"
 import "./include/MakeList.js"
 import "./include/Head.js"
 import "./include/Header.js"

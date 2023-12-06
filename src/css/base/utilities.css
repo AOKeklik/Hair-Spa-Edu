@@ -38,13 +38,27 @@
 .text-justify {
 	text-align: justify;
 }
+.text-right {
+	text-align: right;
+}
 .text-line-s {
 	line-height: 1.3;
+}
+.text-horizantal {
+	display: inline-block;
+	transform-origin: left;
+	transform: rotate(90deg);
 }
 /* text */
 /* space */
 .w-80 {
-	width: 80%;
+	width: 80% !important;
+}
+.w-20 {
+	width: 20% !important;
+}
+.w--7 {
+	width: 7rem;
 }
 .w25 {
 	width: 100%;
@@ -76,13 +90,22 @@
 	height: 20rem !important;
 }
 .h30 {
-	height: 30rem;
+	height: 30rem !important;
 }
 .h35 {
-	height: 35rem;
+	height: 35rem !important;
 }
 .h50 {
-	height: 50rem;
+	height: 50rem !important;
+}
+.h60 {
+	height: 60rem !important;
+}
+.h70 {
+	height: 70rem !important;
+}
+.h80 {
+	height: 80rem !important;
 }
 .p-s {
 	padding: 2rem;
@@ -155,17 +178,17 @@
 	justify-content: end;
 	align-items: end;
 }
-.flex-center {
-	align-items: center;
-}
-.flex-right {
-	margin-left: auto;
-}
 .flex-end {
 	justify-content: end;
 }
+.flex-center {
+	align-items: center;
+}
 .flex-center-v {
 	justify-content: center;
+}
+.flex-right {
+	margin-left: auto;
 }
 .flex-left-center-mobile {
 	justify-content: start;
@@ -341,16 +364,28 @@
 	width: 5rem;
 	height: 5rem;
 }
+/* icon */
 .icon-l,
 .icon-l-circle {
 	width: 10rem;
 	height: 10rem;
 }
+.icon-m-circle {
+	width: 6rem;
+	height: 6rem;
+}
+.icon-s-circle {
+	width: 3rem;
+	height: 3rem;
+}
+.icon-s-circle,
+.icon-m-circle,
 .icon-l-circle {
 	box-sizing: content-box;
 	background-color: var(--color-secondary);
 	padding: 2rem;
 	border-radius: 50%;
+	cursor: pointer;
 }
 .icon-white {
 	fill: var(--color-white);
@@ -361,6 +396,15 @@
 }
 .box-inline-blok {
 	display: inline-block;
+}
+.box-relative {
+	position: relative;
+}
+.box-absolute {
+	position: absolute;
+	top: 0.3rem;
+	left: 50%;
+	/* transform: translate(-50%, -50%); */
 }
 /* markers */
 .heading-marker {

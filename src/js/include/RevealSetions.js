@@ -14,18 +14,17 @@ class RevealSections {
 				.map((_, index) => index / steps || 0)
 		const handleObserving = (entries, observing) => {
 			let theNode
-			entries.forEach((entry) => {
+			entries.forEach(entry => {
 				theNode = entry.target
 				const className = entry.target.dataset.reveal
 				const currentY = entry.boundingClientRect.y
 				const currentRatio = entry.intersectionRatio
 				const isIntersecting = entry.isIntersecting
 
-				if (isIntersecting) {
-					theNode.classList.add(className)
-				}
+				if (!isIntersecting) return
+				theNode.classList.add(className)
+				observing.unobserve(theNode)
 			})
-			observing.unobserve(theNode)
 		}
 		const observing = new IntersectionObserver(handleObserving, {
 			root: null,
