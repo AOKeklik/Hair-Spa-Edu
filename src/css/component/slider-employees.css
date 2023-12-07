@@ -1,48 +1,66 @@
+.slider-employees.slider {
+	height: 45rem;
+}
 .slider-slide img {
 	transition: clip-path 1s ease-out;
 }
 /* img */
-.slider-slide.prev-slide img {
+.slider-employees .slider-slide.prev-slide img {
 	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 	transition: clip-path 0.5s 0.5s;
 }
-.slider-slide.current-slide img {
+.slider-employees .slider-slide.current-slide img {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	transition: clip-path 0.5s 0s;
 }
-.slider-slide.next-slide img {
+.slider-employees .slider-slide.next-slide img {
 	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 	transition: clip-path 0.5s 0.5s;
 }
 
 /* text */
-.slider-slide h3 {
+.slider-employees .slider-slide h3 {
 	transition: 0.2s 0s ease-out;
 }
-.slider-slide p {
+.slider-employees .slider-slide p {
 	transition: 0.2s 0.3s ease-out;
 }
-.slider-slide h3,
-.slider-slide p {
+.slider-employees .slider-slide h3,
+.slider-employees .slider-slide p {
 	opacity: 0;
 	transition-property: transform, opacity;
 }
-.slider-slide h3 {
+.slider-employees .slider-slide h3 {
 	transform: translate(0, -100%);
 }
-.slider-slide p {
+.slider-employees .slider-slide p {
 	transform: translate(0, -50%);
 }
-.slider-slide.current-slide h3 {
+.slider-employees .slider-slide.current-slide h3 {
 	transition: 0.3s 1s ease-out;
 }
-.slider-slide.current-slide p {
+.slider-employees .slider-slide.current-slide p {
 	transition: 0.5s 0.6s ease-out;
 }
 
-.slider-slide.current-slide h3,
-.slider-slide.current-slide p {
+.slider-employees .slider-slide.current-slide h3,
+.slider-employees .slider-slide.current-slide p {
 	opacity: 1;
 	transform: translate(0, 0);
 	transition-property: transform, opacity;
+}
+
+/* control */
+.slider-employees ~ .slider-control .slider-prev::after {
+	content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" viewBox="5 6 12 18"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14 7l-5 5l5 5"%2F%3E%3C%2Fsvg%3E');
+}
+.slider-employees ~ .slider-control .slider-next::after {
+	content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" viewBox="5 6 12 18"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m10 17l5-5l-5-5"%2F%3E%3C%2Fsvg%3E');
+}
+
+/* query */
+@media (max-width: 800px) {
+	.slider-employees.slider {
+		height: 81rem;
+	}
 }

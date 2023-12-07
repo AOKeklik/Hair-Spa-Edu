@@ -4,12 +4,17 @@ body {
 	font-family: "Poppins", sans-serif;
 	line-height: 1.7;
 }
+.heading-huge,
 .heading-primary,
 .heading-secondary,
 .heading-tertiary,
 .heading-quaternary {
 	font-family: "Lato", sans-serif;
 	text-transform: uppercase;
+}
+.heading-huge {
+	font-size: 5rem;
+	font-weight: 400;
 }
 .heading-primary {
 	font-size: 3.5rem;

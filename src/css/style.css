@@ -1,4 +1,5 @@
 /* components */
+@import "./component/slider-testimonials.css";
 @import "./component/slider-employees.css";
 @import "./component/slider.css";
 @import "./component/map.css";

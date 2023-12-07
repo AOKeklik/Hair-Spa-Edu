@@ -2,7 +2,6 @@ class BreadCrumbs {
 	parentElement
 	baseUrl
 	links
-	currentPage
 	constructor() {
 		this.parentElement = document.querySelector("[data-breadcrumbs]")
 		if (!this.parentElement) return
@@ -20,20 +19,22 @@ class BreadCrumbs {
 			.split("/")
 			.filter(Boolean)
 
-		this.links = rawLinks
-
-		this.currentPage = rawLinks
-			.slice()
-			.pop()
-			.replace(/\.(html|php)/, "")
+		this.links = rawLinks.slice().map(n => {
+			return n.replace(/\.(html|php)/, "")
+		})
 	}
 	renderBreadCrumbs() {
 		this.parentElement.innerHTML = ""
-		this.parentElement.insertAdjacentHTML(
-			"afterbegin",
-			`<a href="${this.baseUrl}">home</a>
-        <a href="${this.baseUrl}/${this.currentPage}">${this.currentPage}</a>`
-		)
+
+		let markup = `<a href="${this.baseUrl}">Home</a>`
+		let link = this.baseUrl
+
+		this.links.forEach((el, i, arr) => {
+			link += "/" + el
+			markup += `<a href="${link}">${el}</a>`
+		})
+
+		this.parentElement.insertAdjacentHTML("afterbegin", markup)
 	}
 }
 

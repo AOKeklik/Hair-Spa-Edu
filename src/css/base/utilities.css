@@ -370,8 +370,17 @@
 	object-fit: contain;
 	object-position: bottom;
 }
+.img-secondary {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
 .img-left {
 	object-position: left;
+}
+.img-top {
+	object-position: top;
 }
 .icon-primary,
 .icon-secondary,
