@@ -37,10 +37,10 @@
 	height: 100%;
 }
 
-.slider-control > div:first-child span:hover:first-child {
+.slider-prev:hover {
 	transform: translateX(-1rem);
 }
-.slider-control > div:first-child span:hover:last-child {
+.slider-next:hover {
 	transform: translateX(1rem);
 }
 .slider-dots {

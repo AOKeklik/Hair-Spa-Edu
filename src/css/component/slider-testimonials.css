@@ -5,7 +5,7 @@
 	transition: clip-path 1s ease-out;
 }
 /* img */
-/* .slider-testimonials .slider-slide.prev-slide img {
+.slider-testimonials .slider-slide.prev-slide img {
 	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 	transition: clip-path 0.5s 0.5s;
 }
@@ -16,25 +16,32 @@
 .slider-testimonials .slider-slide.next-slide img {
 	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 	transition: clip-path 0.5s 0.5s;
-} */
+}
 
 /* text */
 .slider-testimonials .slider-slide h3 {
-	transition: 0.2s 0s ease-out;
+	transition: 0.2s .3s ease-out;
 }
 .slider-testimonials .slider-slide p {
-	transition: 0.2s 0.3s ease-out;
+	transition: 0.2s 0.5s ease-out;
 }
+
+.slider-testimonials .slider-slide h2,
 .slider-testimonials .slider-slide h3,
 .slider-testimonials .slider-slide p {
 	opacity: 0;
 	transition-property: transform, opacity;
 }
+.slider-testimonials .slider-slide h2,
 .slider-testimonials .slider-slide h3 {
 	transform: translate(0, -100%);
 }
 .slider-testimonials .slider-slide p {
 	transform: translate(0, -50%);
+}
+
+.slider-testimonials .slider-slide.current-slide h2 {
+	transition: 0.3s 1s ease-out;
 }
 .slider-testimonials .slider-slide.current-slide h3 {
 	transition: 0.3s 1s ease-out;
@@ -43,6 +50,7 @@
 	transition: 0.5s 0.6s ease-out;
 }
 
+.slider-testimonials .slider-slide.current-slide h2,
 .slider-testimonials .slider-slide.current-slide h3,
 .slider-testimonials .slider-slide.current-slide p {
 	opacity: 1;
@@ -51,13 +59,13 @@
 }
 
 /* control */
-.slider-testimonials .slider-slide.prev-slide .slider-control {
+.slider-testimonials .slider-slide.prev-slide .slider-control,
+.slider-testimonials .slider-slide.next-slide .slider-control  {
 	opacity: 0;
-	transform: none;
 }
-.slider-testimonials .slider-slide.next-slide .slider-control {
-	opacity: 0;
-	transform: none;
+.slider-testimonials .slider-prev,
+.slider-testimonials .slider-next {
+	transform: none !important;
 }
 .slider-testimonials .slider-control .slider-prev::after {
 	content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" viewBox="5 6 12 18"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" d="m14 7l-5 5l5 5"%2F%3E%3C%2Fsvg%3E');
