@@ -444,7 +444,17 @@
 	position: absolute;
 	top: 0.3rem;
 	left: 50%;
-	/* transform: translate(-50%, -50%); */
+}
+.box-absolute-full {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translate(0, -50%);
+}
+.box-over-hidden {
+	overflow: hidden;
 }
 /* markers */
 .heading-marker {

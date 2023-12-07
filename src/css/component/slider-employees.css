@@ -1,7 +1,7 @@
 .slider-employees.slider {
 	height: 45rem;
 }
-.slider-slide img {
+.slider-employees .slider-slide img {
 	transition: clip-path 1s ease-out;
 }
 /* img */
