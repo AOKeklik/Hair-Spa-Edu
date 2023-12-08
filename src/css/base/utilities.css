@@ -297,7 +297,7 @@
 	z-index: -2;
 	bottom: 0;
 	left: 0;
-	background-color: var(--color-primary);
+	background-image: linear-gradient(to right, #f5f3f0 70%, transparent 80%);
 	width: 59%;
 	height: 100%;
 }
@@ -368,7 +368,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	object-position: bottom;
+	object-position: center;
 }
 .img-secondary {
 	width: 100%;

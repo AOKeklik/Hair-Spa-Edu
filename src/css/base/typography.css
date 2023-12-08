@@ -39,14 +39,23 @@ body {
 	letter-spacing: 1px;
 	font-size: 1.7rem;
 	font-weight: 400;
+	text-align: justify;
 }
 .list-primary > li {
-	padding-left: 2rem;
+	position: relative;
+	padding-left: 4.5rem;
 	font-size: 1.7rem;
 	font-weight: 400;
+	text-align: justify;
+}
+.list-primary > li:not(:last-child) {
+	margin-bottom: 1rem;
 }
 .list-primary > li::before {
+	position: absolute;
 	content: "\2702";
+	top: -1.1rem;
+	left: -.3rem;
 	padding-right: 1.5rem;
 	font-size: 3rem;
 	color: var(--color-tertiary);

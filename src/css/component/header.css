@@ -70,16 +70,15 @@
 	visibility: hidden;
 }
 .menu-item a:hover {
-	font-weight: 900;
-	color: var(--color-tertiary);
+	color: var(--color-white);
 }
 /* active */
 .menu-item.active {
-	background-color: var(--color-secondary);
-	box-shadow: -1px 0 0 var(--color-secondary);
+	background-color: var(--color-tertiary);
+	box-shadow: -1px 0 0 var(--color-tertiary);
 }
 .menu-item.active a {
-	color: var(--color-tertiary);
+	color: var(--color-white);
 	font-weight: 900;
 }
 /* marker */
@@ -90,9 +89,9 @@
 	left: 0;
 	width: 0;
 	height: 0;
-	background-color: var(--color-secondary);
+	background-color: var(--color-tertiary);
 	transition: 0.3s;
-	box-shadow: -1px 0 0 var(--color-secondary), 1px 0 0 var(--color-secondary);
+	box-shadow: -1px 0 0 var(--color-tertiary), 1px 0 0 var(--color-tertiary);
 }
 /* nav burger */
 .nav-burger {
