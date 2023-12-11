@@ -59,8 +59,13 @@
 }
 
 /* query */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 	.slider-testimonials.slider {
-		height: 103.2rem;
+		height: 107rem;
+	}
+}
+@media (max-width: 400px) {
+	.slider-testimonials.slider {
+		margin-bottom: 15rem;
 	}
 }
