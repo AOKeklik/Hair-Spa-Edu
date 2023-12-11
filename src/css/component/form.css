@@ -1,10 +1,15 @@
+.form-control,
 .form-control p {
 	width: 100%;
-	max-width: fit-content;
 	display: flex;
 	border: 1px solid var(--color-secondary);
 	overflow: hidden;
 }
+.form-control:not(:last-child) {
+	margin-bottom: 3rem;
+}
+
+/* input */
 .form-control-input {
 	width: 100%;
 	z-index: 0;
@@ -17,7 +22,17 @@
 	font-size: 1.7rem;
 	background-color: transparent;
 }
-.form-send-text {
+.form-control-input::placeholder {
+	text-transform: capitalize;
+}
+textarea.form-control-input {
+	height: 100%;
+	min-height: 20rem;
+}
+
+/* btn */
+.form-send-text,
+.form-send-input {
 	border: none;
 	outline: none;
 	background: none;
@@ -29,4 +44,17 @@
 	fill: red;
 	cursor: pointer;
 	border-left: 2px solid var(--color-secondary);
+}
+.form-send-input {
+	border-left: unset;
+	padding: unset;
+	padding: 1rem 2rem;
+	border-radius: 3px;
+	border: 1px solid var(--color-secondary);
+	transition: .3s;
+	transition-property: color, background-color;
+}
+.form-send-input:hover {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
 }

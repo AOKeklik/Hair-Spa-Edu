@@ -1,0 +1,15 @@
+#product-slider {
+
+}
+@media (max-width: 800px) {
+    #product-slider .flex-col1of2.w10 {
+        max-width: unset;
+    }
+    #product-slider .w10 .flex-v {
+        flex-direction: row;
+    }
+    #product-slider .img.w10 {
+        max-width: unset;
+        width: calc((100% - (3 * var(--gap))) / 4);
+    }
+}

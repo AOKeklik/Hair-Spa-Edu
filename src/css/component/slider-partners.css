@@ -1,0 +1,30 @@
+.slider-partners {
+    
+}
+.slider-partners .slider {
+    min-height: 100px;
+}
+.slider-partners .slider-control > *:first-child {
+    display: none;
+}
+.slider-partners .slider-dots {
+    padding: 2rem;
+}
+.slider-partners .slider-dot {
+    width: 100%;
+    max-width: 50px;
+}
+.slider-partners .slider-slides {
+    overflow: hidden;
+}
+.slider-partners .slider-slide {
+    top: calc(50% - 50px);
+}
+.slider-partners-items {
+    padding: 0 2rem;
+    transition: transform 1s;   
+}
+.slider-partners-items img {
+    width: calc((100% - (2 * var(--gap))) / 3);
+    filter: grayscale(.5);
+}

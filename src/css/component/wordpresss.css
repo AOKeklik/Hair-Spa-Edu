@@ -1,7 +1,23 @@
 /* form */
 span.wpcf7-spinner,
 .wpcf7-response-output,
-.wpcf7-not-valid-tip {
-	display: none;
+.home .wpcf7-not-valid-tip {
 	display: none;
 }
+span.wpcf7-not-valid-tip {
+    font-size: 1.3rem;
+    color: #b14545;
+    padding-left: 1rem;
+}
+/* cookie */
+.cky-title {
+	display: none;
+}
+.cky-notice-group {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+button.cky-btn.cky-btn-accept {
+    border-radius: 10px;
+}
+/*  */

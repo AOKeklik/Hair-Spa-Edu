@@ -1,4 +1,6 @@
 /* components */
+@import "./component/slider-partners.css";
+@import "./component/slider-product.css";
 @import "./component/slider-testimonials.css";
 @import "./component/slider-employees.css";
 @import "./component/slider.css";
@@ -7,6 +9,7 @@
 @import "./component/breadcrumbs.css";
 @import "./component/line.css";
 @import "./component/form.css";
+@import "./component/table.css";
 @import "./component/header.css";
 @import "./component/btn.css";
 @import "./component/wordpresss.css";

@@ -90,11 +90,21 @@
 	}
 }
 /* flex gap */
+.flex-gap1 {
+	--gap: 1rem;
+	gap: var(--gap);
+}
 .flex-gap5 {
 	--gap: 5rem;
+	gap: var(--gap);
+}
+.flex-gap10 {
+	--gap: 10rem;
+	gap: var(--gap);
 }
 .flex-gap15 {
 	--gap: 15rem;
+	gap: var(--gap);
 }
 .flex-row {
 	display: flex;

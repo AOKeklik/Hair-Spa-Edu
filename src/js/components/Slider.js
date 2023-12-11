@@ -46,6 +46,13 @@ class Slider {
 				}%, 0)`
 			})
 		}
+		if (this.sliderType === 2) {
+			this.slides.forEach((el, i) => {
+				el.style.transform = `translate(${
+					(this.currentSlide - i) * 100
+				}%, 0)`
+			})
+		}
 
 		const prevSlide =
 			this.currentSlide > 0 ? this.currentSlide - 1 : this.length - 1

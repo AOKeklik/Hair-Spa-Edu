@@ -64,7 +64,10 @@ module.exports = {
 		}),
 	],
 	optimization: {
-		// minimize: true,
-		minimizer: [new CssMinimizerPlugin(), new TerserWebpackPlugin()],
+		minimize: true,
+		minimizer: [
+			//new CssMinimizerPlugin(), 
+			new TerserWebpackPlugin()
+		],
 	},
 }
