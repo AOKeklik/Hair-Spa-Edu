@@ -32,6 +32,7 @@ class Slider {
 			})
 		})
 		this.dots.addEventListener("click", function (e) {
+			console.log()
 			const dot = e.target.closest(".slider-dot")
 			if (!dot) return
 			that.dotSlider(e)
@@ -46,7 +47,7 @@ class Slider {
 				}%, 0)`
 			})
 		}
-		if (this.sliderType === 2) {
+		if (this.sliderType === 2 || this.sliderType === 3) {
 			this.slides.forEach((el, i) => {
 				el.style.transform = `translate(${
 					(this.currentSlide - i) * 100
@@ -100,19 +101,36 @@ class Slider {
 	renderControls() {
 		this.length = this.slides.length
 
+		const renderImgDots = [...this.slides]
+			.map((n, i) => {
+				if (this.currentSlide === i)
+					return `<img src="${n.src}" data-slide="${i}" class="slider-dot img active-dot" />`
+				return `<img src="${n.src}" data-slide="${i}" class="slider-dot img" />`
+			})
+			.join("")
+
+		console.log(renderImgDots)
+
 		const renderDots = Array.from({ length: this.length }, (n, i) => {
 			if (this.currentSlide === i)
 				return `<span data-slide="${i}" class="slider-dot active-dot"></span>`
 			return `<span data-slide="${i}" class="slider-dot"></span>`
 		}).join("")
 
-		const markup = `
+		let markup
+
+		markup = `
 			<div class="m-b-m">
 				<span class="slider-prev"></span>
 				<span class="slider-next"></span>
 			</div>
 			<div class="slider-dots">${renderDots}</div>
 		`
+		if (this.sliderType === 3) {
+			markup = `<div class="slider-dots flex-v flex-gap1">
+				${renderImgDots}
+			</div>`
+		}
 
 		this.control.forEach(el => {
 			el.innerHTML = ""

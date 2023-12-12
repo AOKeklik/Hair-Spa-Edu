@@ -26,6 +26,9 @@
 .text-bold {
 	font-weight: 600 !important;
 }
+.text-bolder {
+	font-weight: 900 !important;
+}
 .text-xs {
 	font-size: 1.6rem;
 }
@@ -34,6 +37,9 @@
 }
 .text-m {
 	font-size: 4rem;
+}
+.text-l {
+	font-size: 6rem;
 }
 .text-cap {
 	text-transform: capitalize;
@@ -53,7 +59,7 @@
 	transform: rotate(90deg);
 }
 .text-caveat {
-	font-family: 'Caveat', cursive;
+	font-family: "Caveat", cursive;
 }
 /* text */
 /* space */
@@ -110,6 +116,9 @@
 }
 .h60 {
 	height: 60rem !important;
+}
+.h67-5 {
+	height: 67.5rem !important;
 }
 .h70 {
 	height: 70rem !important;
@@ -251,7 +260,7 @@
 	filter: blur(1px) opacity(0.9);
 }
 .bg-white {
-	background-color: var(--color-white);
+	background-color: var(--color-white) !important;
 }
 .bg-primary {
 	background-color: var(--color-primary);
@@ -276,6 +285,12 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.bg-contain {
+	background-size: contain;
+}
+.bg-left {
+	background-position: left;
 }
 .bg-gradient,
 .bg-rectangle,
