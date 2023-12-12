@@ -5,19 +5,18 @@ span.wpcf7-spinner,
 	display: none;
 }
 span.wpcf7-not-valid-tip {
-    font-size: 1.3rem;
-    color: #b14545;
-    padding-left: 1rem;
+	font-size: 1.3rem;
+	color: #b14545;
+	padding-left: 1rem;
 }
 /* cookie */
 .cky-title {
 	display: none;
 }
 .cky-notice-group {
-    max-width: 120rem;
-    margin: 0 auto;
+	max-width: 120rem;
+	margin: 0 auto;
 }
 button.cky-btn.cky-btn-accept {
-    border-radius: 10px;
+	border-radius: 10px;
 }
-/*  */

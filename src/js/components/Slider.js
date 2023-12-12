@@ -109,8 +109,6 @@ class Slider {
 			})
 			.join("")
 
-		console.log(renderImgDots)
-
 		const renderDots = Array.from({ length: this.length }, (n, i) => {
 			if (this.currentSlide === i)
 				return `<span data-slide="${i}" class="slider-dot active-dot"></span>`
