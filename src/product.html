@@ -13,9 +13,11 @@
 <body>
     <header class="header">
         <nav class="nav-top">
-            <svg class="nav-top-icon">
-                <use href="./assets/icons.svg#icon-search" />
-            </svg>
+            <a id="searching-box" href="">
+                <svg class="nav-top-icon">
+                    <use href="./assets/icons.svg#icon-search" />
+                </svg>
+            </a>
             <svg class="nav-top-icon">
                 <use href="./assets/icons.svg#icon-user" />
             </svg>
@@ -54,8 +56,8 @@
 
     <main class="page-product m-b-l">
         <!-- hero section -->
-        <section class="p-y-l bg-primary m-b-s">
-            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
+        <section class="p-y-l bg-primary m-b-s bg-img" style="background-image: linear-gradient(to left, rgb(211 211 211 / .7) 10%, rgb(245 243 240 / .95)70%), url(./assets/banner/3H6A4687.jpg);">
+            <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-0">
                 <span class="m-b-s">SZKOLENIE BIZNISOWE POZIOM I</span>
                 <span class="heading-marker"></span>
             </h2>
@@ -68,7 +70,7 @@
         <section class="m-b-l">
             <div class="container">
                 <div id="slider-product" class="flex-row flex-gap10">
-                    <div class="flex-col1of2">
+                    <div class="flex-col1of2"  data-reveal="fade-left-1000-0">
                         <div class="flex-row flex-gap1">
                             <div class="flex-col1of2 w10">
                                 <div class="slider-control"></div>
@@ -91,8 +93,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-col1of2">
-                        <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-0">
+                    <div class="flex-col1of2"  data-reveal="fade-right-1000-0">
+                        <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-500">
                             <span class="m-b-s">SZKOLENIE BIZNISOWE POZIOM I</span>
                             <span class="heading-marker"></span>
                         </h2>
@@ -117,7 +119,140 @@
                 </div>
             </div>
         </section>
-
+        <section class="bg-primary m-b-l">
+            <div class="container p-y-l" data-reveal="fade-up-1000-0">
+                <div data-lightbox="block">
+                    <img src="./assets/product/10.png" alt="">
+                    <img src="./assets/product/11.png" alt="">
+                    <img src="./assets/product/12.png" alt="">
+                    <img src="./assets/product/13.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="m-b-l">
+            <div class="container">
+                <p class="paragraph-primary" data-reveal="fade-up-1000-0">
+                    Chcesz rozwijać kompetencje swoje i swoich pracowników? Brakuje Ci środków na dodatkową edukację?
+                    Przedstawiamy idealną możliwość dla Ciebie! Skorzystaj z oferty dostępnych szkoleń dofinansowywanych
+                    do 100% z Krajowego Funduszu Szkoleniowego (KFS) Urzędu Pracy w Twoim mieście lub dofinansowanych do
+                    80% z Bazy Usług Rozwojowych (BUR). Możesz być spokojny o formalności – we wszystkim pomożemy.
+                </p>
+            </div>
+        </section>
+        <!-- line section -->
+        <section class="line-section m-b-l">
+            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
+                <span class="m-b-s">najbliższe szkolenia online</span>
+                <span class="heading-marker"></span>
+            </h2>
+            <div class="container">
+                <ul class="line" data-reveal="fade-up-1000-500">
+                    <span class="line-marker"></span>
+                    <li class="line-item-disc">9.03</li>
+                    <li class="line-item flex">
+                        <h3 class="heading-secondary flex-v flex-center text-thin">
+                            <span>instagram</span>
+                            <span> poziom II</span>
+                        </h3>
+                    </li>
+                    <li class="line-item-disc">4.03</li>
+                    <li class="line-item flex">
+                        <h3 class="heading-secondary flex-v flex-center text-thin">
+                            <span>zarządzanie</span>
+                            <span>salonem</span>
+                        </h3>
+                    </li>
+                    <li class="line-item-disc">1.03</li>
+                    <li class="line-item flex">
+                        <h3 class="heading-secondary flex-v flex-center text-thin">
+                            <span>instagram</span>
+                            <span> poziom I</span>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="bg-primary m-b-l">
+            <div class="container p-y-l" data-reveal="fade-up-1000-0">
+                <div data-lightbox="block">
+                    <img src="./assets/product/6.jpg" alt="">
+                    <img src="./assets/product/6.png" alt="">
+                    <img src="./assets/product/7.png" alt="">
+                    <img src="./assets/product/7.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="m-b-l">
+            <div class="container">
+                <p class="paragraph-primary" data-reveal="fade-up-1000-0">
+                    Chcesz rozwijać kompetencje swoje i swoich pracowników? Brakuje Ci środków na dodatkową edukację?
+                    Przedstawiamy idealną możliwość dla Ciebie! Skorzystaj z oferty dostępnych szkoleń dofinansowywanych
+                    do 100% z Krajowego Funduszu Szkoleniowego (KFS) Urzędu Pracy w Twoim mieście lub dofinansowanych do
+                    80% z Bazy Usług Rozwojowych (BUR). Możesz być spokojny o formalności – we wszystkim pomożemy.
+                </p>
+            </div>
+        </section>
+        <!-- programs section -->
+        <section class="programs-section m-b-l">
+            <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-500">
+                <span class="m-b-s">najbliższe szkolenia stacjonarne</span>
+                <span class="heading-marker"></span>
+            </h2>
+            <div class="container">
+                <div class="row gap3">
+                    <div class="col1of5" data-reveal="fade-up-1000-0">
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin">
+                                <span>szkolenie</span>
+                                <span>biznisowe</span>
+                                <span> poziom I</span>
+                            </h3>
+                            <div><span class="text-m">2</span><span class="text-s">mazrec</span></div>
+                        </a>
+                    </div>
+                    <div class="col1of5" data-reveal="fade-up-1000-0">
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin">
+                                <span>szkolenie</span>
+                                <span>trychologiczne</span>
+                                <span> poziom III</span>
+                            </h3>
+                            <div><span class="text-m">11</span><span class="text-s">mazrec</span></div>
+                        </a>
+                    </div>
+                    <div class="col1of5" data-reveal="fade-up-1000-0">
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin">
+                                <span>szkolenie</span>
+                                <span>biznisowe</span>
+                                <span> poziom II</span>
+                            </h3>
+                            <div><span class="text-m">5</span><span class="text-s">kwiecień</span></div>
+                        </a>
+                    </div>
+                    <div class="col1of5" data-reveal="fade-up-1000-0">
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin">
+                                <span>szkolenie</span>
+                                <span>blondy</span>
+                                <span> poziom II</span>
+                            </h3>
+                            <div><span class="text-m">7</span><span class="text-s">kwiecień</span></div>
+                        </a>
+                    </div>
+                    <div class="col1of5" data-reveal="fade-up-1000-0">
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin">
+                                <span>szkolenie</span>
+                                <span>blondy</span>
+                                <span> poziom II</span>
+                            </h3>
+                            <div><span class="text-m">9</span><span class="text-s">kwiecień</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->

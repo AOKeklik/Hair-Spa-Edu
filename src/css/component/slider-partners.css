@@ -24,7 +24,7 @@
     padding: 0 2rem;
     transition: transform 1s;   
 }
-.slider-partners-items img {
+.slider-partners-items a {
     width: calc((100% - (2 * var(--gap))) / 3);
     filter: grayscale(.5);
 }

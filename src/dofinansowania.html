@@ -11,9 +11,11 @@
 <body>
     <header class="header">
         <nav class="nav-top">
-            <svg class="nav-top-icon">
-                <use href="./assets/icons.svg#icon-search" />
-            </svg>
+            <a id="searching-box" href="">
+                <svg class="nav-top-icon">
+                    <use href="./assets/icons.svg#icon-search" />
+                </svg>
+            </a>
             <svg class="nav-top-icon">
                 <use href="./assets/icons.svg#icon-user" />
             </svg>
@@ -51,7 +53,7 @@
     </header>
 
     <main class="page-dofinansowania m-b-l">
-        <section class="p-y-l bg-primary m-b-s">
+        <section class="p-y-l bg-primary m-b-s bg-img" style="background-image: linear-gradient(to left, rgb(211 211 211 / .7) 10%, rgb(245 243 240 / .95)70%), url(./assets/banner/3H6A4450.jpg);">
             <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
                 <span class="m-b-s">dofinansowania</span>
                 <span class="heading-marker"></span>
@@ -72,13 +74,16 @@
                 </p>
             </div>
         </section>
-        <section class="m-b-l h70 box-relative box-over-hidden flex flex-center flex-center-v">
+        <section class="m-b-l h70 box-relative box-over-hidden flex flex-center flex-center-v" data-reveal="fade-up-1000-0">
             <video autoplay muted loop plays-inline class="box-absolute-full bg-primary">
                 <source src="./assets/box/Hair Salon BROLL video shot on SONY A7siii.mp4" type="video/mp4" />
             </video>
             <div class="container">
-                <h3 class="heading-secondary text-white flex-right" data-reveal="fade-down-1000-0">education</h3>
-                <h2 class="heading-huge text-white" data-reveal="fade-up-1000-0">hair spa and edu</h2>
+                <h3 class="heading-secondary text-white flex-right" data-reveal="fade-down-1000-500">education</h3>
+                <h2 class="heading-huge text-white flex-v m-b-m" data-reveal="fade-up-1000-500">
+                    <span class="m-b-xs">hair spa and edu</span>
+                    <span class="heading-marker bg-white"></span>
+                </h2>
                 <p class="paragraph-primary text-white" data-reveal="fade-up-1000-500">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit.
                     Deserunt officiis odit qui laborum

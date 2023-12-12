@@ -15,6 +15,9 @@
 .fade-up-1000-500 {
 	animation: fade 1s 0.5s both, up 1s 0.5s both;
 }
+.fade-up-1000-1000 {
+	animation: fade 1s 1s both, up 1s 1s both;
+}
 /* down */
 .fade-down-1000-0 {
 	animation: fade 1s 0s both, down 1s 0s both;

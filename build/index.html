@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title></title>
-<script defer src="bundle-da04cd14954e1db39d4d.js"></script><link href="bundle-31b9f7f152f2181246ba.css" rel="stylesheet"></head>
+<script defer src="bundle-edb41637ba7c03b1d1c5.js"></script></head>
 
 <body>
     <header class="header">
         <nav class="nav-top">
-            <svg class="nav-top-icon">
-                <use href="assets/icons.svg#icon-search" />
-            </svg>
+            <a id="searching-box" href="">
+                <svg class="nav-top-icon">
+                    <use href="assets/icons.svg#icon-search" />
+                </svg>
+            </a>
             <svg class="nav-top-icon">
                 <use href="assets/icons.svg#icon-user" />
             </svg>
@@ -50,7 +52,7 @@
         </div>
     </header>
 
-    <main class="bg-rectangle m-b-l">
+    <main class="page-home bg-rectangle m-b-l">
         <!-- hero section -->
         <section class="hero-section p-y-l">
             <div class="container">
@@ -62,8 +64,6 @@
                                     style="background-image: url(./assets/box/1.jpg);">
                                     <h2 data-list-span="text-white" class="heading-secondary flex-v text-center p-r-m">
                                         salon,fryzjerski
-                                        <!-- <span class="text-white">salon</span>
-                                        <span class="text-white">fryzjerski</span> -->
                                     </h2>
                                     <a href="#" class="btn btn-primary w-80 m-b-m">poznaj nas</a>
                                 </div>
@@ -73,8 +73,6 @@
                                     style="background-image: url(./assets/box/2.jpg);">
                                     <h2 data-list-span="text-white" class="heading-secondary flex-v text-center p-r-m">
                                         salon,fryzjerski
-                                        <!-- <span class="text-white">salon</span>
-                                        <span class="text-white">fryzjerski</span> -->
                                     </h2>
                                     <a href="#" class="btn btn-primary w-80 m-b-m">sprawdż produkty</a>
                                 </div>
@@ -103,7 +101,7 @@
         <!-- line section -->
         <section class="line-section m-b-l">
             <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
-                <span>najbliższe szkolenia online</span>
+                <span class="m-b-s">najbliższe szkolenia online</span>
                 <span class="heading-marker"></span>
             </h2>
             <div class="container">
@@ -136,7 +134,7 @@
         <!-- programs section -->
         <section class="programs-section m-b-l">
             <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-500">
-                <span>najbliższe szkolenia stacjonarne</span>
+                <span class="m-b-s">najbliższe szkolenia stacjonarne</span>
                 <span class="heading-marker"></span>
             </h2>
             <div class="container">
@@ -263,7 +261,7 @@
         <!-- customer section -->
         <section class="customer-section">
             <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
-                <span>inspirujące historie naszych klientów</span>
+                <span class="m-b-s">inspirujące historie naszych klientów</span>
                 <span class="heading-marker"></span>
             </h2>
             <div class="container">
@@ -346,8 +344,7 @@
     </footer>
     <footer class="p-y-s text-center text-xs">© 2023 HairSpaEdu. Wszelkie prawa zastrzeżone. Wykonanie: Hedea.pl
     </footer>
-
-
+    
     <script type="module" src="assets/index.js"></script>
 </body>
 

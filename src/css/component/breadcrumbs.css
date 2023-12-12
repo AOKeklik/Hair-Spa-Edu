@@ -38,3 +38,8 @@
 	border-left: 2rem solid transparent;
 	border-bottom: 2rem solid var(--color-primary);
 }
+@media (max-width: 500px) {
+	[data-breadcrumbs] > * {
+		font-size: 1.2rem;
+	}
+}

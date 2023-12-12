@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <title></title>
 </head>
 
@@ -52,19 +54,21 @@
         </div>
     </header>
 
-    <main class="page-modelki m-b-l">
+    <main class="page-search m-b-l">
         <!-- hero section -->
         <section class="p-y-l bg-primary m-b-s bg-img" style="background-image: linear-gradient(to left, rgb(211 211 211 / .7) 10%, rgb(245 243 240 / .95)70%), url(./assets/banner/3H6A4687.jpg);">
             <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
-                <span class="m-b-s">modelki</span>
+                <span class="m-b-s">szukaj</span>
                 <span class="heading-marker"></span>
             </h2>
         </section>
+        <!-- breadcrumbs section -->
         <section class="m-b-l">
             <div class="container">
                 <div data-breadcrumbs="true"></div>
             </div>
         </section>
+        <!-- pragraph section -->
         <section class="m-b-l">
             <div class="container">
                 <p class="paragraph-primary" data-reveal="fade-up-1000-0">
@@ -75,96 +79,77 @@
                 </p>
             </div>
         </section>
-        <section class="bg-primary m-b-l">
-            <div class="container p-y-l">
-                <div data-lightbox="block">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A8114.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A8163.jpg" alt="">
-                    <img src="./assets/perełki/Zdjęcia po prostu na TAK/3H6A4450.jpg" alt="">
-                    <img src="./assets/perełki/Zdjęcia po prostu na TAK/3H6A4485.jpg" alt="">
-                </div>
-            </div>
-        </section>
-        <section class="bg-secondary-light m-b-l">
-            <div class="slider-partners" data-reveal="fade-up-1000-0">
-                <div class="flex-row">
-                    <div class="flex-col1of3 p-y-l bg-secondary">
-                        <h2 class="heading-huge m-b-m flex-v flex-center text-caveat text-secondary text-center text-l">
-                            <span class="m-b-s text-bolder text-white">nasze partnarze</span>
-                            <span class="heading-marker bg-white"></span>
-                        </h2>
-                        <div class="text-center">
-                            <img class="img h10" src="./assets/logo.png" alt="">
-                        </div>
-                        <div class="slider-control"></div>
-                    </div>
-                    <div class="slider flex-col2of3 flex flex-center" data-slider-type="2">
-                        <div class="slider-slides">
-                            <div class="slider-slide flex flex-center flex-gap10 slider-partners-items">
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                            </div>
-                            <div class="slider-slide flex flex-center flex-gap10 slider-partners-items">
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                            </div>
-                            <div class="slider-slide flex flex-center flex-gap10 slider-partners-items">
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                                <a href="">
-                                    <img class="img" src="./assets/partners/1.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- search section -->
         <section class="m-b-l">
+            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-down-1000-0">
+                <span class="m-b-s">wyszukiwarka</span>
+                <span class="heading-marker"></span>
+            </h2>
+            <div class="container m-b-m">
+                <form class="form-control" data-reveal="fade-up-1000-0">
+                    <input type="text" class="form-control-input" placeholder="napisz coś...">
+                    <input type="submit" value="szukaj" class="form-send-text">
+                </form>
+            </div>
+            <div class="container m-b-m" data-reveal="fade-up-1000-500">
+                <p class="paragraph-primary">
+                    <span class="text-bolder text-s text-cap">wyniki dla frazy</span>:
+                    <span>sdfasd...</span>
+                </p>
+            </div>
+            <!-- <div class="container m-b-m" data-reveal="fade-up-1000-500">
+                <p class="paragraph-primary text-center m-b-m">
+                    <span class="text-bolder text-s text-cap">brak wyników</span>
+                </p>
+                <p class="paragraph-primary text-center">
+                    Na stronie nie znaleziono wpisów spełniających twoje kryteria.
+                </p>
+            </div> -->
             <div class="container">
-                <div data-lightbox="mega">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A5369.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A5460.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A5752.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A5842.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A5937.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A6193.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A6376.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A6445.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A6647.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A7537.jpg" alt="">
+                <div class="row flex-gap10">
+                    <div class="col1of1">
+                        <h2 class="heading-tertiary m-b-s flex-v flex-center" data-reveal="fade-up-1000-0">
+                            <span class="m-b-xs">Podstawowy Rachunek Płatniczy</span>
+                            <span class="heading-marker"></span>
+                        </h2>
+                        <p class="paragraph-primary">
+                            Podstawowy Rachunek Płatniczy przeznaczone jest dla osób fizycznych od 13 roku życia, które nie posiadają innego rachunku płatniczego w Polsce. ...
+                        </p>
+                    </div>
+                    <div class="col1of1">
+                        <h2 class="heading-tertiary m-b-s flex-v flex-center" data-reveal="fade-up-1000-0">
+                            <span class="m-b-xs">Podstawowy Rachunek Płatniczy</span>
+                            <span class="heading-marker"></span>
+                        </h2>
+                        <p class="paragraph-primary">
+                            Podstawowy Rachunek Płatniczy przeznaczone jest dla osób fizycznych od 13 roku życia, które nie posiadają innego rachunku płatniczego w Polsce. ...
+                        </p>
+                    </div>
+                    <div class="col1of1">
+                        <h2 class="heading-tertiary m-b-s flex-v flex-center" data-reveal="fade-up-1000-0">
+                            <span class="m-b-xs">Podstawowy Rachunek Płatniczy</span>
+                            <span class="heading-marker"></span>
+                        </h2>
+                        <p class="paragraph-primary">
+                            Podstawowy Rachunek Płatniczy przeznaczone jest dla osób fizycznych od 13 roku życia, które nie posiadają innego rachunku płatniczego w Polsce. ...
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="bg-primary">
-            <div class="container p-y-l">
-                <div data-lightbox="block">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A7577.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A7603.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A7927.jpg" alt="">
-                    <img src="./assets/perełki/Najlepsze zdjęcia pozostałe/3H6A8096.jpg" alt="">
+        <!-- map section -->
+        <section class="m-b-l">
+            <div data-reveal="fade-up-1000-0">
+                <div class="acf-map" id="map">
+                    <div class="marker-map" data-lat="52.64534065484459" data-lng="19.102958627726274" data-zoom="14">
+                        <h3><a target="_blank" href="https://maps.app.goo.gl/wqKWHht5h2GccvEr6">HSE</a></h3>
+                        <p>Hair Spa Edu</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- footer -->
     <footer class="footer bg-secondary p-y-l">
         <div class="container">
@@ -229,6 +214,8 @@
 
 
     <script type="module" src="./js/index.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>
 
 </html>

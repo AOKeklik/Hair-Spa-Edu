@@ -37,6 +37,9 @@
 	row-gap: 5rem;
 }
 /* 1 */
+.col1of1 {
+	flex: 1 0 100%;
+}
 .col1of2 {
 	flex: 1 0 calc((100% - 2rem) / 2);
 }

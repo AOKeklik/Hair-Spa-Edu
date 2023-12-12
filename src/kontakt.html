@@ -13,9 +13,11 @@
 <body>
     <header class="header">
         <nav class="nav-top">
-            <svg class="nav-top-icon">
-                <use href="./assets/icons.svg#icon-search" />
-            </svg>
+            <a id="searching-box" href="">
+                <svg class="nav-top-icon">
+                    <use href="./assets/icons.svg#icon-search" />
+                </svg>
+            </a>
             <svg class="nav-top-icon">
                 <use href="./assets/icons.svg#icon-user" />
             </svg>
@@ -54,7 +56,7 @@
 
     <main class="page-kontakt m-b-l">
         <!-- hero section -->
-        <section class="p-y-l bg-primary m-b-s">
+        <section class="p-y-l bg-primary m-b-s bg-img" style="background-image: linear-gradient(to left, rgb(211 211 211 / .7) 10%, rgb(245 243 240 / .95)70%), url(./assets/banner/3H6A4687.jpg);">
             <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
                 <span class="m-b-s">kontakt</span>
                 <span class="heading-marker"></span>
@@ -65,6 +67,7 @@
                 <div data-breadcrumbs="true"></div>
             </div>
         </section>
+        <!-- paragraph section -->
         <section class="m-b-l">
             <div class="container">
                 <p class="paragraph-primary" data-reveal="fade-up-1000-0">
@@ -204,6 +207,7 @@
                 </div>
             </div>
         </section>
+        <!-- map section -->
         <section class="m-b-l">
             <div data-reveal="fade-up-1000-0">
                 <div class="acf-map" id="map">
@@ -214,9 +218,10 @@
                 </div>
             </div>
         </section>
+        <!-- form section -->
         <section>
             <div class="container">
-                <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-0">
+                <h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-down-1000-500">
                     <span class="m-b-s">Formularz Kontaktowy</span>
                     <span class="heading-marker"></span>
                 </h2>

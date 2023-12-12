@@ -11,9 +11,11 @@
 <body>
     <header class="header">
         <nav class="nav-top">
-            <svg class="nav-top-icon">
-                <use href="./assets/icons.svg#icon-search" />
-            </svg>
+            <a id="searching-box" href="">
+                <svg class="nav-top-icon">
+                    <use href="./assets/icons.svg#icon-search" />
+                </svg>
+            </a>
             <svg class="nav-top-icon">
                 <use href="./assets/icons.svg#icon-user" />
             </svg>
@@ -52,15 +54,25 @@
 
     <main class="page-prasa m-b-l">
         <!-- hero section -->
-        <section class="p-y-l bg-primary m-b-s">
-            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0-2x">
-                <span>prasa</span>
+        <section class="p-y-l bg-primary m-b-s bg-img" style="background-image: linear-gradient(to left, rgb(211 211 211 / .7) 10%, rgb(245 243 240 / .95)70%), url(./assets/banner/3H6A4687.jpg);">
+            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
+                <span class="m-b-s">prasa</span>
                 <span class="heading-marker"></span>
             </h2>
         </section>
         <section class="m-b-l">
             <div class="container">
                 <div data-breadcrumbs="true"></div>
+            </div>
+        </section>
+        <section class="m-b-l">
+            <div class="container">
+                <p class="paragraph-primary" data-reveal="fade-up-1000-0">
+                    Chcesz rozwijać kompetencje swoje i swoich pracowników? Brakuje Ci środków na dodatkową edukację?
+                    Przedstawiamy idealną możliwość dla Ciebie! Skorzystaj z oferty dostępnych szkoleń dofinansowywanych
+                    do 100% z Krajowego Funduszu Szkoleniowego (KFS) Urzędu Pracy w Twoim mieście lub dofinansowanych do
+                    80% z Bazy Usług Rozwojowych (BUR). Możesz być spokojny o formalności – we wszystkim pomożemy.
+                </p>
             </div>
         </section>
     </main>

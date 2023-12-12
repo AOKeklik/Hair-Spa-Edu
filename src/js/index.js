@@ -1,4 +1,5 @@
 // import "../css/style.css"
+import "./components/SearchBox.js"
 import "./components/Slider.js"
 import "./components/MakeList.js"
 import "./components/Head.js"
