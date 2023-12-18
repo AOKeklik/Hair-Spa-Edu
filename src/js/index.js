@@ -1,4 +1,4 @@
-import "../css/style.css"
+// import "../css/style.css"
 import "./components/Likes.js"
 import "./components/SearchBox.js"
 import "./components/Slider.js"

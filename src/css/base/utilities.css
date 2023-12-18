@@ -126,6 +126,13 @@
 .h80 {
 	height: 80rem !important;
 }
+/* padding */
+.p-xxs {
+	padding: 0.5rem;
+}
+.p-xs {
+	padding: 1rem;
+}
 .p-s {
 	padding: 2rem;
 }
@@ -273,6 +280,9 @@
 }
 .bg-tertiary {
 	background-color: var(--color-tertiary) !important;
+}
+.bg-red {
+	background-color: tomato;
 }
 .bg-tertiary-gradient {
 	background-image: linear-gradient(
@@ -495,6 +505,25 @@
 }
 .box-over-hidden {
 	overflow: hidden;
+}
+.box-badge-s {
+	position: absolute;
+	top: -1rem;
+	right: -2rem;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	text-align: center;
+	line-height: 2rem;
+}
+.box-rounded {
+	border-radius: 50%;
+}
+.box-rounded-s {
+	border-radius: 3px;
+}
+.box-rounded-m {
+	border-radius: 9px;
 }
 /* markers */
 .heading-marker {
