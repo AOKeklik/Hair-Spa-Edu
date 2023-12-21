@@ -18,6 +18,7 @@ class Like {
 	async deleteLike(theNode) {
 		const theId = +theNode.dataset.like
 		const theSpan = theNode.querySelector("span")
+		const parent = theNode.closest(".col1of5")
 
 		if (theSpan) {
 			let likeCount = parseInt(theSpan.innerHTML, 10)
@@ -25,12 +26,13 @@ class Like {
 			theNode.querySelector("span").innerHTML = likeCount
 		}
 
+		if (window.location.pathname === "/ulubiony/" && parent) {
+			parent.remove()
+		}
+
 		theNode.dataset.likeExists = false
 
-		// console.log(likeCount)
-
 		const res = await this.fetchLike({ like: theId }, "DELETE")
-		// console.log(res)
 	}
 	async createLike(theNode) {
 		const theId = +theNode.dataset.likeProduct
@@ -44,10 +46,7 @@ class Like {
 
 		theNode.dataset.likeExists = true
 
-		// console.log(likeCount)
-
 		const res = await this.fetchLike({ productId: theId }, "POST")
-		// console.log(res)
 	}
 	async fetchLike(body = null, type = null) {
 		try {

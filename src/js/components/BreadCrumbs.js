@@ -19,6 +19,10 @@ class BreadCrumbs {
 			.split("/")
 			.filter(Boolean)
 
+		if (window.location.pathname === "/checkout/") {
+			rawLinks.unshift("koszyk")
+		}
+
 		this.links = rawLinks.slice().map(n => {
 			return n.replace(/\.(html|php)/, "")
 		})
