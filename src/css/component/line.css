@@ -58,7 +58,7 @@
 }
 .page-home .line-item-disc:nth-last-child(2)::after {
 	background-color: var(--color-primary);
-}		
+}
 /* prettier-ignore */
 .line-item-disc:nth-child(-n+4) {
 	background-color: var(--color-primary);
@@ -66,8 +66,8 @@
 .line-item-disc:nth-last-child(2) {
 	background-color: var(--color-white);
 }
-@media (max-width:800px) {
-	.line { 
+@media (max-width: 800px) {
+	.line {
 		flex-direction: column;
 		max-width: 50rem;
 		padding: 5rem 0;

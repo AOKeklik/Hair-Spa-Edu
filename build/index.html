@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title></title>
-<script defer src="bundle-563377ee2f05dc6a899d.js"></script></head>
+<script defer src="bundle-268c77b363cdfdfbf6ef.js"></script></head>
 
 <body>
     <header class="header">
@@ -26,7 +26,7 @@
                 <svg class="nav-top-icon">
                     <use href="assets/icons.svg#icon-bag" />
                 </svg>
-                <span class="bg-secondary text-white box-rounded box-badge-s">4</span>
+                <span id="badge" class="bg-secondary text-white box-rounded box-badge-s">4</span>
             </div>
         </nav>
         <div class="nav-wrap">
@@ -103,7 +103,7 @@
         </section>
         <!-- line section -->
         <section class="line-section m-b-l">
-            <h2 class="heading-primary m-b-m flex-v flex-center" data-reveal="fade-up-1000-0">
+            <h2 class="heading-primary m-b-l flex-v flex-center" data-reveal="fade-up-1000-0">
                 <span class="m-b-s">najbliższe szkolenia online</span>
                 <span class="heading-marker"></span>
             </h2>
@@ -111,25 +111,40 @@
                 <ul class="line" data-reveal="fade-up-1000-500">
                     <span class="line-marker"></span>
                     <li class="line-item-disc">9.03</li>
-                    <li class="line-item flex">
-                        <h3 class="heading-secondary flex-v flex-center text-thin">
-                            <span>instagram</span>
-                            <span> poziom II</span>
-                        </h3>
+                    <li class="line-item flex hover-to-bottom box-relative">
+                        <a href="#">
+                            <h3 class="heading-secondary flex-v flex-center text-thin w25 text-center">
+                                instagram poziom II
+                            </h3>
+                        </a>
+                        <form action="" class="flex hover-top-object box-absolute box-top-outsite p-y-s">
+                            <button>
+                                <svg class="icon-s">
+                                    <use href="assets/icons.svg#icon-add-cart" />
+                                </svg>
+                            </button>
+                            <button>
+                                <svg class="icon-s">
+                                    <use href="assets/icons.svg#icon-heart" />
+                                </svg>
+                            </button>
+                        </form>
                     </li>
                     <li class="line-item-disc">4.03</li>
-                    <li class="line-item flex">
-                        <h3 class="heading-secondary flex-v flex-center text-thin">
-                            <span>zarządzanie</span>
-                            <span>salonem</span>
-                        </h3>
+                    <li class="line-item flex hover-to-bottom box-relative" data-product="hover">
+                        <a href="#">
+                            <h3 class="heading-secondary flex-v flex-center text-thin w25 text-center">
+                                zarządzanie salonem
+                            </h3>
+                        </a>
                     </li>
                     <li class="line-item-disc">1.03</li>
-                    <li class="line-item flex">
-                        <h3 class="heading-secondary flex-v flex-center text-thin">
-                            <span>instagram</span>
-                            <span> poziom I</span>
-                        </h3>
+                    <li class="line-item flex hover-to-bottom box-relative" data-product="hover">
+                        <a href="#">
+                            <h3 class="heading-secondary flex-v flex-center text-thin w25 text-center">
+                                instagram poziom
+                            </h3>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -143,53 +158,79 @@
             <div class="container">
                 <div class="row gap3">
                     <div class="col1of5" data-reveal="fade-up-1000-0">
-                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s">
-                            <h3 class="heading-tertiary flex-v flex-center text-thin">
-                                <span>szkolenie</span>
-                                <span>biznisowe</span>
-                                <span> poziom I</span>
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">
+                                szkolenie biznisowe poziom I
                             </h3>
-                            <div><span class="text-m">2</span><span class="text-s">mazrec</span></div>
+                            <div class="flex flex-between">
+                                <div>
+                                    <span class="text-m">2</span><span class="text-s">mazrec</span>
+                                </div>
+                                <form action="" class="flex hover-bottom-left-object gap05">
+                                    <button>
+                                        <svg class="icon-s">
+                                            <use href="assets/icons.svg#icon-add-cart" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg class="icon-s">
+                                            <use href="assets/icons.svg#icon-heart" />
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
                         </a>
                     </div>
                     <div class="col1of5" data-reveal="fade-up-1000-0">
-                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
-                            <h3 class="heading-tertiary flex-v flex-center text-thin">
-                                <span>szkolenie</span>
-                                <span>trychologiczne</span>
-                                <span> poziom III</span>
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">
+                                szkolenie trychologiczne poziom III
                             </h3>
-                            <div><span class="text-m">11</span><span class="text-s">mazrec</span></div>
+                            <div class="flex flex-between" data-product="hover"
+                                data-product-class="hover-bottom-left-object gap05">
+                                <div>
+                                    <div><span class="text-m">11</span><span class="text-s">mazrec</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="col1of5" data-reveal="fade-up-1000-0">
-                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
-                            <h3 class="heading-tertiary flex-v flex-center text-thin">
-                                <span>szkolenie</span>
-                                <span>biznisowe</span>
-                                <span> poziom II</span>
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">
+                                szkolenie biznisowe poziom II
                             </h3>
-                            <div><span class="text-m">5</span><span class="text-s">kwiecień</span></div>
+                            <div class="flex flex-between" data-product="hover"
+                                data-product-class="hover-bottom-left-object gap05">
+                                <div>
+                                    <div><span class="text-m">5</span><span class="text-s">kwiecień</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="col1of5" data-reveal="fade-up-1000-0">
-                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
-                            <h3 class="heading-tertiary flex-v flex-center text-thin">
-                                <span>szkolenie</span>
-                                <span>blondy</span>
-                                <span> poziom II</span>
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">
+                                szkolenie blondy poziom II
                             </h3>
-                            <div><span class="text-m">7</span><span class="text-s">kwiecień</span></div>
+                            <div class="flex flex-between" data-product="hover"
+                                data-product-class="hover-bottom-left-object gap05">
+                                <div>
+                                    <div><span class="text-m">7</span><span class="text-s">kwiecień</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="col1of5" data-reveal="fade-up-1000-0">
-                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white">
-                            <h3 class="heading-tertiary flex-v flex-center text-thin">
-                                <span>szkolenie</span>
-                                <span>blondy</span>
-                                <span> poziom II</span>
+                        <a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+                            <h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">
+                                szkolenie blondy poziom II
                             </h3>
-                            <div><span class="text-m">9</span><span class="text-s">kwiecień</span></div>
+                            <div class="flex flex-between" data-product="hover"
+                                data-product-class="hover-bottom-left-object gap05">
+                                <div>
+                                    <div><span class="text-m">9</span><span class="text-s">kwiecień</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>

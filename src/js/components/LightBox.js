@@ -85,7 +85,7 @@ class LightBox {
 			<span class="lightbox-btn lightbox-btn-left"><</span>
 			<span class="lightbox-btn lightbox-btn-right">></span>
 			<span class="lightbox-btn lightbox-btn-close">&times;</span>
-			<img src="./assets/ZDJĘCIA www/Magda 2.JPG" alt="">
+			<img src="" alt="">
 		</div>`
 		document.body.insertAdjacentHTML("beforeend", markup)
 	}

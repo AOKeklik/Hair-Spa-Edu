@@ -1,5 +1,6 @@
-// import "../css/style.css"
-import "./components/Likes.js"
+import "../css/style.css"
+import "./components/Product.js"
+import "./components/Like.js"
 import "./components/SearchBox.js"
 import "./components/Slider.js"
 import "./components/MakeList.js"

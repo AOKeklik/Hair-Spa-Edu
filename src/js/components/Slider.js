@@ -39,7 +39,6 @@ class Slider {
 		})
 	}
 	executeSlider() {
-		console.log(this.sliderType)
 		if (this.sliderType === 1) {
 			this.slides.forEach((el, i) => {
 				el.querySelector("img").style.transform = `translate(${
