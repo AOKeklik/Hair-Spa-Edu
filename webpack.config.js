@@ -25,14 +25,7 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [
-					{
-						// loader: MiniCssExtractPlugin.loader,
-						loader: "style-loader",
-						options: {},
-					},
-					"css-loader",
-				],
+				use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }],
 			},
 			{
 				test: /\.s[ac]ss$/,
@@ -65,10 +58,7 @@ module.exports = {
 		}),
 	],
 	optimization: {
-		minimize: true,
-		minimizer: [
-			//new CssMinimizerPlugin(), 
-			new TerserWebpackPlugin()
-		],
+		// minimize: true,
+		minimizer: [new CssMinimizerPlugin(), new TerserWebpackPlugin()],
 	},
 }
