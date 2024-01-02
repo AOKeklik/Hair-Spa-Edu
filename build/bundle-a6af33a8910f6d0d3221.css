@@ -898,7 +898,15 @@ textarea.form-control-input {
 		width: 100%;
 	}
 }
-
+@media (max-width: 330px) {
+	.nav-top {
+		height: 10rem;
+		justify-content: center;
+		align-items: start;
+		gap: 1rem;
+		padding-top: 2rem;
+	}
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/btn.css ***!
   \*****************************************************************************/
@@ -948,8 +956,7 @@ textarea.form-control-input {
   \************************************************************************************/
 /* form */
 span.wpcf7-spinner,
-.wpcf7-response-output,
-.home .wpcf7-not-valid-tip {
+.wpcf7-response-output {
 	display: none;
 }
 span.wpcf7-not-valid-tip {

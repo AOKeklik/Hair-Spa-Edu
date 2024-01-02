@@ -24,8 +24,10 @@ class SearchBox {
 		this.parentElement.classList.remove("searchbox-active")
 	}
 	renderSeachQuery() {
-		let search = window.location.search
-		if (search === "") return
+		let search = window.location?.search
+		const isSearchPage = search.slice(1).startsWith("s")
+	
+		if (!isSearchPage || search === "") return
 
 		const parent = document.getElementById("search-query")
 		search = window.location.search.split("=")[1].split("+").join(", ")

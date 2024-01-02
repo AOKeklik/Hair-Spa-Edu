@@ -1,7 +1,6 @@
 /* form */
 span.wpcf7-spinner,
-.wpcf7-response-output,
-.home .wpcf7-not-valid-tip {
+.wpcf7-response-output {
 	display: none;
 }
 span.wpcf7-not-valid-tip {

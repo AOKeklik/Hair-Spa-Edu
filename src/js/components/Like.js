@@ -14,14 +14,11 @@ class likeLoop {
 		const renderMarkup = () =>
 			tempLikes
 				.map(e => {
+					// console.log(e)
 					return `
 				<div class="col1of5" data-reveal="fade-up-1000-0">
-					<a href="#" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
-						<h3 class="heading-tertiary flex-v flex-center text-thin">
-							<span>szkolenie</span>
-							<span>biznisowe</span>
-							<span> poziom I</span>
-						</h3>
+					<a href="${e.theLink}" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+						<h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">${e.theTitle}</h3>
 						<div class="flex flex-between">
 							<div>
 								<span class="text-m">2</span><span class="text-s">mazrec</span>
@@ -32,7 +29,7 @@ class likeLoop {
 										<use href="${assestURL}icons.svg#icon-add-cart" />
 									</svg>
 								</button>
-								<div aria-admin="false" onclick="event.preventDefault()" role="like" data-like="${Date.now()}" data-like-exists="true" data-like-product="${e}">
+								<div aria-admin="false" onclick="event.preventDefault()" role="like" data-like="${Date.now()}" data-like-exists="true" data-like-product="${e.theProductId}">
 									<svg class="icon-s" aria-hidden="false">
 										<use href="${assestURL}icons.svg#icon-heart" />
 									</svg>
@@ -51,7 +48,7 @@ class likeLoop {
 			return `
 			
 			<h2 class="heading-primary m-b-m flex-v flex-center text-center" data-reveal="fade-up-1000-500">
-				<span class="m-b-s">najbliższe szkolenia stacjonarne</span>
+				<span class="m-b-s">produkty zapisane w plikach cookies</span>
 				<span class="heading-marker"></span>
 			</h2>
 			<div class="container">
@@ -86,12 +83,26 @@ class Like {
 			"click",
 			this.clickDispatcher.bind(this)
 		)
+		this.updateHeartIconLoadPage()
+	}
+	updateHeartIconLoadPage () {
+		const elements = [...document.querySelectorAll("[data-like-product]")]
+		if (elements.length === 0) return
+		const list = elements.filter(n => {
+			return tempLikes.find(e => +n.dataset.likeProduct == e.theProductId)
+		})
+		list.forEach(e => {
+			if (e.getAttribute("aria-admin") === "true") return
+			console.log("lll")
+			e.setAttribute("data-like-exists", "true")
+		})
 	}
 	clickDispatcher(e) {
 		const theNode = e.target.closest("[role=like]")
+		const parentcontainer = e.target.closest("[data-parent=parent]")
 		const theStatus = theNode.dataset.likeExists
 		if (theStatus === "true") this.deleteLike(theNode)
-		if (theStatus === "false") this.createLike(theNode)
+		if (theStatus === "false") this.createLike(theNode, parentcontainer)
 	}
 	async deleteLike(theNode) {
 		try {
@@ -112,17 +123,23 @@ class Like {
 				parent.remove()
 			}
 
-			tempLikes = tempLikes.filter(e => e !== theProductId)
-			window.localStorage.setItem("like", JSON.stringify(tempLikes))
+			if (theNode.closest("[aria-admin=false]")) {
+				tempLikes = tempLikes.filter(e => {
+					return e.theProductId !== theProductId
+				})
+				window.localStorage.setItem("like", JSON.stringify(tempLikes))
+			} else {
+				const res = await this.fetchLike({ like: theLikeId }, "DELETE")
+			}
 
-			if (tempLikes.length === 0) {
-				console.log(tempLikes, theNode, theNode.closest("section"))
+			if (tempLikes.length === 0 && document.querySelector("[rol=like-loop]")) {
+				// console.log(tempLikes, theNode, theNode.closest("section"))
 				document.querySelector("[rol=like-loop]").replaceChildren()
 			}
 
-			if (theNode.closest("[aria-admin=false]")) return
+			// if (theNode.closest("[aria-admin=false]")) return
 
-			const res = await this.fetchLike({ like: theLikeId }, "DELETE")
+			
 			// const res = await axios({
 			// 	url: "http://test-004.weboki.pl/wp-json/v1/like",
 			// 	method: "delete",
@@ -132,8 +149,17 @@ class Like {
 			console.log(err)
 		}
 	}
-	async createLike(theNode) {
+	async createLike(theNode, parentcontainer) {
 		try {
+			const title = parentcontainer.querySelector(".heading-tertiary") 
+			|| parentcontainer.querySelector(".heading-secondary") 
+			|| parentcontainer.querySelector(".heading-primary")
+
+			const link = parentcontainer.querySelector("a") 
+
+			const theLink = link.href 
+			const theTitle = title.textContent.trim()
+
 			const theProductId = +theNode.dataset.likeProduct
 			const theSpan = theNode.querySelector("span")
 
@@ -145,16 +171,26 @@ class Like {
 
 			theNode.dataset.likeExists = true
 
-			tempLikes.push(theProductId)
-			tempLikes = [...new Set(tempLikes)]
-			window.localStorage.setItem("like", JSON.stringify(tempLikes))
+			if (theNode.closest("[aria-admin=false]")) {
+				tempLikes.push({theProductId, theTitle, theLink })
+				var flags = [], output = [], l = tempLikes.length, i;
+				for( i=0; i<l; i++) {
+					if( flags[tempLikes[i].theProductId]) continue;
+					flags[tempLikes[i].theProductId] = true;
+					output.push(tempLikes[i]);
+				}
+				window.localStorage.setItem("like", JSON.stringify(output))
+			} else {
+				const res = await this.fetchLike(
+					{ productId: theProductId },
+					"POST"
+				)
+				theNode.setAttribute("data-like", res)
+			}
 
-			if (theNode.closest("[aria-admin=false]")) return
+			// if (theNode.closest("[aria-admin=false]")) return
 
-			const res = await this.fetchLike(
-				{ productId: theProductId },
-				"POST"
-			)
+			
 			// const res = await axios({
 			// 	url: "http://test-004.weboki.pl/wp-json/v1/like",
 			// 	method: "post",
