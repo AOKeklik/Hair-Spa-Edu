@@ -25,7 +25,7 @@ class SearchBox {
 	}
 	renderSeachQuery() {
 		let search = window.location?.search
-		const isSearchPage = search.slice(1).startsWith("s")
+		const isSearchPage = search.slice(1).startsWith("s=")
 	
 		if (!isSearchPage || search === "") return
 

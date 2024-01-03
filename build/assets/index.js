@@ -1,4 +1,5 @@
 import "../css/style.css";
+import "./components/SortBtn.js";
 import "./components/Product.js";
 import "./components/Like.js";
 import "./components/SearchBox.js";

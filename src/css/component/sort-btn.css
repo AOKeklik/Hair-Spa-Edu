@@ -1,0 +1,37 @@
+.sort-btn {
+    overflow: hidden;
+    position: relative;
+}
+.sort-btn > *:not(span) {
+    font-size: 1.7rem;
+    transition: .3s;
+    padding: 1rem 2rem;
+}
+.sort-btn > *:hover {
+    color: var(--color-white);
+}
+.sort-btn-marker {
+   width: 0px;
+   height: 0px; 
+   background-color: var(--color-secondary);
+   position: absolute;
+   transition: .3s;
+   z-index: -1;
+   box-shadow: 1px 0 0 0 var(--color-secondary);
+}
+.sort-btn-active {
+    position: relative;
+}
+.sort-btn-active::after {
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    background-color: var(--color-secondary);
+    z-index: -1;
+}
+.sort-btn > *.sort-btn-active {
+    color: var(--color-white);
+}
