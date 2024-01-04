@@ -1,4 +1,4 @@
-import { dev } from "./Constants"
+import { dev } from "./Constants.js"
 
 class SortBTN {
     constructor (parent) {

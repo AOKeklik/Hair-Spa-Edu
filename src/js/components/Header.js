@@ -43,12 +43,11 @@ class Header {
 		this.marker.style.height = theNode.offsetHeight + "px"
 	}
 	reloadingActiveMenuItem() {
-		const currentPage = document.URL
+		const currentPath = window.location.pathname.split("/").filter(Boolean)[0]
 
 		this.menuItems.forEach(el => {
 			el.classList.remove("active")
-
-			if (el.children[0].href === currentPage) el.classList.add("active")
+			if (el.children[0].href.includes(currentPath)) el.classList.add("active")
 		})
 	}
 }
