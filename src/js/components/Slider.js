@@ -114,13 +114,16 @@ class Slider {
 			return `<span data-slide="${i}" class="slider-dot"></span>`
 		}).join("")
 
-		let markup
+		let markup = ""
 
-		markup = `
-			<div class="m-b-m">
-				<span class="slider-prev"></span>
-				<span class="slider-next"></span>
-			</div>
+		if (this.sliderType !== 2)
+			markup += `
+				<div class="m-b-m">
+					<span class="slider-prev"></span>
+					<span class="slider-next"></span>
+				</div>
+			`
+		markup += `
 			<div class="slider-dots">${renderDots}</div>
 		`
 		if (this.sliderType === 3) {

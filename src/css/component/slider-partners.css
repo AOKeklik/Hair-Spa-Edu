@@ -4,9 +4,6 @@
 .slider-partners .slider {
     min-height: 100px;
 }
-.slider-partners .slider-control > *:first-child {
-    display: none;
-}
 .slider-partners .slider-dots {
     padding: 2rem;
 }

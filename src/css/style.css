@@ -1,5 +1,6 @@
 /* components */
 @import "./component/sort-btn.css";
+@import "./component/slider-hero.css";
 @import "./component/slider-partners.css";
 @import "./component/slider-product.css";
 @import "./component/slider-testimonials.css";

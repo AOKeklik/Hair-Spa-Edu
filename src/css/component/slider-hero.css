@@ -1,0 +1,15 @@
+.hero-slider, .hero-slider .slider-slides {
+    min-height: 150px;
+}
+.hero-slider .slider-slides {
+    overflow: hidden;
+}
+.hero-slider-item {
+    transition: transform 1s;
+  
+}
+@media (max-width: 800px) {
+    .hero-slider, .hero-slider .slider-slides {
+        min-height: 600px;
+    }
+}

@@ -46,6 +46,24 @@
 .sort-btn > *.sort-btn-active {
     color: var(--color-white);
 }
+/*!*************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/slider-hero.css ***!
+  \*************************************************************************************/
+.hero-slider, .hero-slider .slider-slides {
+    min-height: 150px;
+}
+.hero-slider .slider-slides {
+    overflow: hidden;
+}
+.hero-slider-item {
+    transition: transform 1s;
+  
+}
+@media (max-width: 800px) {
+    .hero-slider, .hero-slider .slider-slides {
+        min-height: 600px;
+    }
+}
 /*!*****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/slider-partners.css ***!
   \*****************************************************************************************/
@@ -54,9 +72,6 @@
 }
 .slider-partners .slider {
     min-height: 100px;
-}
-.slider-partners .slider-control > *:first-child {
-    display: none;
 }
 .slider-partners .slider-dots {
     padding: 2rem;
@@ -753,11 +768,11 @@ textarea.form-control-input {
 	background-color: #f9f9f9;
 }
 .tr-header {
-	width: 30%;
+	width: 50%;
 	text-align: left;
 }
 .tr-body {
-	width: 70%;
+	width: 50%;
 	text-align: left;
 }
 .th,
@@ -1776,6 +1791,9 @@ body {
 }
 .box-rounded-m {
 	border-radius: 9px;
+}
+.box-none {
+	display: none;
 }
 /* markers */
 .heading-marker {

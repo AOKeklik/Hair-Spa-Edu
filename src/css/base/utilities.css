@@ -572,6 +572,9 @@
 .box-rounded-m {
 	border-radius: 9px;
 }
+.box-none {
+	display: none;
+}
 /* markers */
 .heading-marker {
 	width: 8rem;

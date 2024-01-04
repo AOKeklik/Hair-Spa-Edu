@@ -20,11 +20,9 @@ class likeLoop {
 					<a href="${e.theLink}" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
 						<h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">${e.theTitle}</h3>
 						<div class="flex flex-between">
-							<div>
-								<span class="text-m">2</span><span class="text-s">mazrec</span>
-							</div>
-							<form action="" class="flex flex-center hover-bottom-left-object gap05">
-								<button>
+							<div id="product-date">${e.theDate}</div>
+							<form action="" method="post" enctype="multipart/form-data" class="flex flex-center hover-bottom-left-object gap05">
+								<button name="add-to-cart" value="${e.theProductId}">
 									<svg class="icon-s">
 										<use href="${assestURL}icons.svg#icon-add-cart" />
 									</svg>
@@ -151,14 +149,19 @@ class Like {
 	}
 	async createLike(theNode, parentcontainer) {
 		try {
+			const link = parentcontainer.querySelector("a")
+
 			const title = parentcontainer.querySelector(".heading-tertiary") 
 			|| parentcontainer.querySelector(".heading-secondary") 
-			|| parentcontainer.querySelector(".heading-primary")
+			|| parentcontainer.querySelector(".heading-primary") 
 
-			const link = parentcontainer.querySelector("a") 
+			const dateObjsc = parentcontainer.querySelector("#product-date")
 
 			const theLink = link.href 
 			const theTitle = title.textContent.trim()
+			const theDate = dateObjsc.innerHTML.trim()
+			
+			console.log(theDate)
 
 			const theProductId = +theNode.dataset.likeProduct
 			const theSpan = theNode.querySelector("span")
@@ -172,7 +175,7 @@ class Like {
 			theNode.dataset.likeExists = true
 
 			if (theNode.closest("[aria-admin=false]")) {
-				tempLikes.push({theProductId, theTitle, theLink })
+				tempLikes.push({theProductId, theTitle, theLink, theDate })
 				var flags = [], output = [], l = tempLikes.length, i;
 				for( i=0; i<l; i++) {
 					if( flags[tempLikes[i].theProductId]) continue;
