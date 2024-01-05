@@ -50,10 +50,13 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/slider-hero.css ***!
   \*************************************************************************************/
 .hero-slider, .hero-slider .slider-slides {
-    min-height: 150px;
+    min-height: 200px;
 }
 .hero-slider .slider-slides {
     overflow: hidden;
+}
+.hero-slider .slider-slide {
+    top: 60px;
 }
 .hero-slider-item {
     transition: transform 1s;
@@ -61,7 +64,7 @@
 }
 @media (max-width: 800px) {
     .hero-slider, .hero-slider .slider-slides {
-        min-height: 600px;
+        min-height: 650px;
     }
 }
 /*!*****************************************************************************************!*\
