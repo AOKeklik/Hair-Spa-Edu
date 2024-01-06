@@ -14,11 +14,14 @@ class likeLoop {
 		const renderMarkup = () =>
 			tempLikes
 				.map(e => {
-					// console.log(e)
 					return `
 				<div class="col1of5" data-reveal="fade-up-1000-0">
-					<a href="${e.theLink}" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
-						<h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">${e.theTitle}</h3>
+					<a href="${
+						e.theLink
+					}" class="flex-v flex-between p-s p-b-0 h20 border-s bg-white hover-to-bottom">
+						<h3 class="heading-tertiary flex-v flex-center text-thin w15 text-center flex-center-self">${
+							e.theTitle
+						}</h3>
 						<div class="flex flex-between">
 							<div id="product-date">${e.theDate}</div>
 							<form action="" method="post" enctype="multipart/form-data" class="flex flex-center hover-bottom-left-object gap05">
@@ -27,7 +30,9 @@ class likeLoop {
 										<use href="${assestURL}icons.svg#icon-add-cart" />
 									</svg>
 								</button>
-								<div aria-admin="false" onclick="event.preventDefault()" role="like" data-like="${Date.now()}" data-like-exists="true" data-like-product="${e.theProductId}">
+								<div aria-admin="false" onclick="event.preventDefault()" role="like" data-like="${Date.now()}" data-like-exists="true" data-like-product="${
+						e.theProductId
+					}">
 									<svg class="icon-s" aria-hidden="false">
 										<use href="${assestURL}icons.svg#icon-heart" />
 									</svg>
@@ -83,15 +88,18 @@ class Like {
 		)
 		this.updateHeartIconLoadPage()
 	}
-	updateHeartIconLoadPage () {
-		const elements = [...document.querySelectorAll("[data-like-product]")]
+	updateHeartIconLoadPage() {
+		const elements = [
+			...document.querySelectorAll("[data-like-product]"),
+		]
 		if (elements.length === 0) return
 		const list = elements.filter(n => {
-			return tempLikes.find(e => +n.dataset.likeProduct == e.theProductId)
+			return tempLikes.find(
+				e => +n.dataset.likeProduct == e.theProductId
+			)
 		})
 		list.forEach(e => {
 			if (e.getAttribute("aria-admin") === "true") return
-			console.log("lll")
 			e.setAttribute("data-like-exists", "true")
 		})
 	}
@@ -125,24 +133,25 @@ class Like {
 				tempLikes = tempLikes.filter(e => {
 					return e.theProductId !== theProductId
 				})
-				window.localStorage.setItem("like", JSON.stringify(tempLikes))
+				window.localStorage.setItem(
+					"like",
+					JSON.stringify(tempLikes)
+				)
 			} else {
-				const res = await this.fetchLike({ like: theLikeId }, "DELETE")
+				const res = await this.fetchLike(
+					{ like: theLikeId },
+					"DELETE"
+				)
 			}
 
-			if (tempLikes.length === 0 && document.querySelector("[rol=like-loop]")) {
-				// console.log(tempLikes, theNode, theNode.closest("section"))
-				document.querySelector("[rol=like-loop]").replaceChildren()
+			if (
+				tempLikes.length === 0 &&
+				document.querySelector("[rol=like-loop]")
+			) {
+				document
+					.querySelector("[rol=like-loop]")
+					.replaceChildren()
 			}
-
-			// if (theNode.closest("[aria-admin=false]")) return
-
-			
-			// const res = await axios({
-			// 	url: "http://test-004.weboki.pl/wp-json/v1/like",
-			// 	method: "delete",
-			// 	data: { like: theLikeId },
-			// })
 		} catch (err) {
 			console.log(err)
 		}
@@ -151,17 +160,17 @@ class Like {
 		try {
 			const link = parentcontainer.querySelector("a")
 
-			const title = parentcontainer.querySelector(".heading-tertiary") 
-			|| parentcontainer.querySelector(".heading-secondary") 
-			|| parentcontainer.querySelector(".heading-primary") 
+			const title =
+				parentcontainer.querySelector(".heading-tertiary") ||
+				parentcontainer.querySelector(".heading-secondary") ||
+				parentcontainer.querySelector(".heading-primary")
 
-			const dateObjsc = parentcontainer.querySelector("#product-date")
+			const dateObjsc =
+				parentcontainer.querySelector("#product-date")
 
-			const theLink = link.href 
+			const theLink = link.href
 			const theTitle = title.textContent.trim()
 			const theDate = dateObjsc.innerHTML.trim()
-			
-			console.log(theDate)
 
 			const theProductId = +theNode.dataset.likeProduct
 			const theSpan = theNode.querySelector("span")
@@ -175,14 +184,25 @@ class Like {
 			theNode.dataset.likeExists = true
 
 			if (theNode.closest("[aria-admin=false]")) {
-				tempLikes.push({theProductId, theTitle, theLink, theDate })
-				var flags = [], output = [], l = tempLikes.length, i;
-				for( i=0; i<l; i++) {
-					if( flags[tempLikes[i].theProductId]) continue;
-					flags[tempLikes[i].theProductId] = true;
-					output.push(tempLikes[i]);
+				tempLikes.push({
+					theProductId,
+					theTitle,
+					theLink,
+					theDate,
+				})
+				var flags = [],
+					output = [],
+					l = tempLikes.length,
+					i
+				for (i = 0; i < l; i++) {
+					if (flags[tempLikes[i].theProductId]) continue
+					flags[tempLikes[i].theProductId] = true
+					output.push(tempLikes[i])
 				}
-				window.localStorage.setItem("like", JSON.stringify(output))
+				window.localStorage.setItem(
+					"like",
+					JSON.stringify(output)
+				)
 			} else {
 				const res = await this.fetchLike(
 					{ productId: theProductId },
@@ -190,15 +210,6 @@ class Like {
 				)
 				theNode.setAttribute("data-like", res)
 			}
-
-			// if (theNode.closest("[aria-admin=false]")) return
-
-			
-			// const res = await axios({
-			// 	url: "http://test-004.weboki.pl/wp-json/v1/like",
-			// 	method: "post",
-			// 	data: { like: theProductId },
-			// })
 		} catch (err) {
 			console.log(err)
 		}

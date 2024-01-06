@@ -1,4 +1,5 @@
 import "../css/style.css"
+import "./components/ContactForm7.js"
 import "./components/SortBtn.js"
 import "./components/Product.js"
 import "./components/Like.js"
