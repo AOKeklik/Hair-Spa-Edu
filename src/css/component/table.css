@@ -1,9 +1,13 @@
-.table {
+.table {	
+}
+.table-body {
 	width: 100%;
+	min-width: 440px;
 	display: flex;
 	font-size: 1.7rem;
 }
-.table > * {
+.table .tr-header,
+.table .tr-body {
 	display: flex;
 	flex-direction: column;
 }
@@ -28,4 +32,7 @@
 .th {
 	font-weight: 700;
 	text-transform: uppercase;
+}
+@media (max-width: 450px) {
+	
 }

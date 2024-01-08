@@ -107,13 +107,25 @@
 		align-self: end;
 	}
 	.line-item-disc::after {
-		position: absolute;
-		z-index: -1;
-		content: "";
 		top: -10%;
 		left: calc(50% - 3rem);
 		background-color: var(--color-white) !important;
-		width: 3rem;
-		height: 3rem;
+	}
+}
+@media (max-width: 440px) {
+	.line::before, .line::after {
+		left: calc(5.5rem - 2.2rem);
+	}
+	.line-marker {
+		left: calc(5.5rem - 3px);
+	}
+	.line-item-disc {
+		align-self: self-start;
+	}
+	.line-item-disc::after {
+		left: calc(50% - 1.5rem);
+	}
+	.line-item {
+		align-self: end;
 	}
 }
