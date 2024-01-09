@@ -766,12 +766,18 @@ textarea.form-control-input {
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/table.css ***!
   \*******************************************************************************/
-.table {
+.table {	
+	overflow-x: auto;
 	width: 100%;
+}
+.table-body {
+	width: 100%;
+	min-width: 500px;
 	display: flex;
 	font-size: 1.7rem;
 }
-.table > * {
+.table .tr-header,
+.table .tr-body {
 	display: flex;
 	flex-direction: column;
 }
@@ -796,6 +802,9 @@ textarea.form-control-input {
 .th {
 	font-weight: 700;
 	text-transform: uppercase;
+}
+@media (max-width: 450px) {
+	
 }
 
 /*!********************************************************************************!*\

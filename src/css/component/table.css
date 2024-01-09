@@ -1,8 +1,10 @@
 .table {	
+	overflow-x: auto;
+	width: 100%;
 }
 .table-body {
 	width: 100%;
-	min-width: 440px;
+	min-width: 500px;
 	display: flex;
 	font-size: 1.7rem;
 }
