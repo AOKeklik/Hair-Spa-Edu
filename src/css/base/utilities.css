@@ -45,7 +45,10 @@
 	font-size: 6rem;
 }
 .text-cap {
-	text-transform: capitalize;
+	text-transform: capitalize !important;
+}
+.text-up {
+	text-transform: uppercase !important;
 }
 .text-justify {
 	text-align: justify;

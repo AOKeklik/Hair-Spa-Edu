@@ -14,7 +14,8 @@
     position: relative;
 }
 .sort-btn > *:not(span) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
     transition: .3s;
     padding: 1rem 2rem;
 }
@@ -45,6 +46,12 @@
 }
 .sort-btn > *.sort-btn-active {
     color: var(--color-white);
+}
+/* query */
+@media (max-width: 400px) {
+    .sort-btn > *:not(span) {
+        padding: .5rem 1rem;
+    }
 }
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/component/slider-hero.css ***!
@@ -1288,7 +1295,10 @@ body {
 	font-size: 6rem;
 }
 .text-cap {
-	text-transform: capitalize;
+	text-transform: capitalize !important;
+}
+.text-up {
+	text-transform: uppercase !important;
 }
 .text-justify {
 	text-align: justify;
@@ -1309,6 +1319,9 @@ body {
 }
 /* text */
 /* space */
+.w-100 {
+	width: 100% !important;
+}
 .w-80 {
 	width: 80% !important;
 }
@@ -1907,6 +1920,7 @@ body {
 }
 .col1of5 {
 	flex: 1 0 calc(((100% - 12rem) - 20px) / 5);
+	width: calc(((100% - 12rem) - 20px) / 5);
 }
 /* 2 */
 .col2of3 {
@@ -1916,6 +1930,7 @@ body {
 @media (max-width: 1300px) {
 	.col1of5 {
 		flex: 1 0 calc(((100% - 6rem) - 12px) / 3);
+		width: calc(((100% - 6rem) - 12px) / 3);
 	}
 }
 @media (max-width: 800px) {
@@ -1938,6 +1953,7 @@ body {
 	}
 	.col1of5 {
 		flex: 1 0 calc(((100% - 3rem) - 8px) / 2);
+		width: calc(((100% - 3rem) - 8px) / 2);
 	}
 }
 @media (max-width: 500px) {
@@ -1946,6 +1962,7 @@ body {
 	}
 	.col1of5 {
 		flex: 1 0 100%;
+		width: 100%;
 	}
 }
 /* flex gap */
@@ -1974,12 +1991,15 @@ body {
 /* col */
 .flex-col1of2 {
 	flex: 1 0 calc((100% - var(--gap)) / 2);
+	width: calc((100% - var(--gap)) / 2);
 }
 .flex-col1of3 {
 	flex: 1 0 calc((100% - (2 * var(--gap))) / 3);
+	width: calc((100% - (2 * var(--gap))) / 3);
 }
 .flex-col2of3 {
 	flex: 1 0 calc(2 * ((100% - (2 * var(--gap))) / 3) + var(--gap));
+	width: calc(2 * ((100% - (2 * var(--gap))) / 3) + var(--gap));
 }
 /* nth-child */
 .nth-child:nth-child(even) {
@@ -1989,12 +2009,15 @@ body {
 @media (max-width: 800px) {
 	.flex-col1of2 {
 		flex: 1 0 100%;
+		width: 100%;
 	}
 	.flex-col1of3 {
 		flex: 1 0 100%;
+		width: 100%;
 	}
 	.flex-col2of3 {
 		flex: 1 0 100%;
+		width: 100%;
 	}
 }
 @media (max-width: 500px) {

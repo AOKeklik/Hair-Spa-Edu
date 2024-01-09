@@ -1,5 +1,4 @@
 import "../css/style.css";
-import "../css/style.css";
 import "./components/ContactForm7.js";
 import "./components/SortBtn.js";
 import "./components/Product.js";
@@ -13,3 +12,4 @@ import "./components/RevealSetions.js";
 import "./components/BreadCrumbs.js";
 import "./components/LightBox.js";
 import "./components/Map.js";
+import "./components/Constants.js";

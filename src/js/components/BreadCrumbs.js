@@ -30,7 +30,7 @@ class BreadCrumbs {
 	renderBreadCrumbs() {
 		this.parentElement.innerHTML = ""
 
-		let markup = `<a href="${this.baseUrl}">Home</a>`
+		let markup = `<a href="${this.baseUrl}">strona główna</a>`
 		let link = this.baseUrl
 
 		this.links.forEach((el, i, arr) => {

@@ -17,10 +17,12 @@ class SearchBox {
 	openSearchBox(e) {
 		e.preventDefault()
 		this.parentElement.classList.add("searchbox-active")
+		this.parentElement.querySelector("form").classList.add("fade-up-1000-0")
 	}
 	closeSearchBox(e) {
 		const theNode = e.target.closest(".searchbox-btn")
 		if (!theNode) return
+		this.parentElement.querySelector("form").classList.remove("fade-up-1000-0")
 		this.parentElement.classList.remove("searchbox-active")
 	}
 	renderSeachQuery() {
@@ -37,7 +39,7 @@ class SearchBox {
 	renderSearchBox() {
 		const markup = `
             <div id="searchbox">
-                <form class="form-control" data-reveal="fade-up-1000-0" method="get" action="${window.location.origin}">
+                <form class="form-control" method="get" action="${window.location.origin}">
                     <input type="text" class="form-control-input" placeholder="napisz coś..." id="s" type="search" name="s" />
                     <input type="submit" value="szukaj" class="form-send-text">
                 </form>

@@ -3,7 +3,8 @@
     position: relative;
 }
 .sort-btn > *:not(span) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
     transition: .3s;
     padding: 1rem 2rem;
 }
@@ -34,4 +35,10 @@
 }
 .sort-btn > *.sort-btn-active {
     color: var(--color-white);
+}
+/* query */
+@media (max-width: 400px) {
+    .sort-btn > *:not(span) {
+        padding: .5rem 1rem;
+    }
 }
