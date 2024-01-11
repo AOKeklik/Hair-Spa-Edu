@@ -23,13 +23,12 @@ class Slider {
 	events() {
 		const that = this
 		this.executeSlider()
-		this.control.forEach(el => {
-			el.addEventListener("click", function (e) {
-				const next = e.target.closest(".slider-next")
-				const prev = e.target.closest(".slider-prev")
-				if (next) that.nextSlider()
-				if (prev) that.prevSlider()
-			})
+		this.parentElement.addEventListener("click", function (e) {
+			const next = e.target.closest(".slider-next") || e.target.closest(".slider-slides .slider-hero-next")
+			const prev = e.target.closest(".slider-prev") || e.target.closest(".slider-slides .slider-hero-prev")
+			console.log(next)
+			if (next) that.nextSlider()
+			if (prev) that.prevSlider()
 		})
 		this.dots.addEventListener("click", function (e) {
 			console.log()
