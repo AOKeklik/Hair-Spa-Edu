@@ -8,6 +8,9 @@
 .form-control:not(:last-child) {
 	margin-bottom: 3rem;
 }
+.wpcf7-not-valid-tip:not(:first-child) {
+	display: none;
+}
 
 /* input */
 .form-control-input {

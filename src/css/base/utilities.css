@@ -56,6 +56,9 @@
 .text-right {
 	text-align: right;
 }
+.text-left {
+	text-align: left;
+}
 .text-line-s {
 	line-height: 1.3;
 }
